@@ -1,0 +1,99 @@
+{
+  "experiment": "baseline_majority",
+  "timestamp_utc": "2026-10-12T06:23:38.214421+00:00",
+  "metrics": {
+    "model": "majority_class",
+    "predicted_label": "joy",
+    "train_seconds": 0.0055,
+    "validation": {
+      "accuracy": 0.352,
+      "macro_f1": 0.0868,
+      "weighted_f1": 0.1833,
+      "per_class": {
+        "sadness": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.352,
+          "recall": 1.0,
+          "f1": 0.5207,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 81
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.3475,
+      "macro_f1": 0.086,
+      "weighted_f1": 0.1792,
+      "per_class": {
+        "sadness": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.3475,
+          "recall": 1.0,
+          "f1": 0.5158,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 66
+        }
+      }
+    },
+    "inference": {
+      "predict_total_ms": 0.02,
+      "predict_ms_per_example": 0.0
+    }
+  }
+}
