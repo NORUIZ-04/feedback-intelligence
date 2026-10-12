@@ -18,7 +18,7 @@ Python, PyTorch, Hugging Face Transformers / Datasets / Hub, scikit-learn, sente
 ## Quickstart (Windows PowerShell)
 
 ```powershell
-git clone https://github.com/YOUR-USERNAME/feedback-intelligence.git
+git clone https://github.com/NORUIZ-04/feedback-intelligence.git
 cd feedback-intelligence
 python -m venv .venv
 .venv\Scripts\Activate.ps1
