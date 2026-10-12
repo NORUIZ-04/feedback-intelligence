@@ -5,3 +5,4 @@ Engineering notes written as the project is built: what was done, why, the comma
 | Date | Topic | Outcome |
 |---|---|---|
 | 2026-10-12 | [Project setup and tooling](2026-10-12-project-setup.md) | Repo scaffold, config, logging, metrics saver, tests and linting in place |
+| 2026-10-12 | [Data pipeline and dataset analysis](2026-10-12-data-pipeline.md) | Cleaned splits, dataset profile and plots saved to results |
