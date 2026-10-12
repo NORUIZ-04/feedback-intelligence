@@ -1,0 +1,11 @@
+seed: 42
+dataset:
+  name: dair-ai/emotion
+model:
+  name: distilbert-base-uncased
+training:
+  epochs: 3
+  batch_size: 32
+  learning_rate: 2.0e-5
+paths:
+  results_dir: results
