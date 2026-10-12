@@ -19,3 +19,8 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - Class-weighting experiment and Logistic Regression C sweep (selected on validation).
 - Baseline comparison table and chart generated from saved results; tests for evaluation helpers.
 - Restored `.env.example`; added `scikit-learn` and `pyarrow` to requirements.
+
+- DistilBERT fine-tuning (standard and class-weighted) on the cleaned emotion splits, with validation-based epoch selection.
+- Token length analysis and `max_length=64` decision; dynamic-padding dataset and collate function.
+- Final model comparison, confusion matrices, per-class F1 chart and error sample.
+- Tests for the transformer data code and analysis helpers; pinned `transformers==5.19.0`.

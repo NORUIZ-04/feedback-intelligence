@@ -7,7 +7,12 @@ training:
   epochs: 3
   batch_size: 32
   learning_rate: 2.0e-5
+  max_length: 64
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  fp16: true
 data:
   processed_dir: data/processed
 paths:
   results_dir: results
+  models_dir: models

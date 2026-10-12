@@ -1,0 +1,124 @@
+{
+  "experiment": "transformer_distilbert",
+  "timestamp_utc": "2026-10-12T10:10:36.857647+00:00",
+  "metrics": {
+    "model": "transformer_distilbert",
+    "class_weighted": false,
+    "max_length": 64,
+    "epochs": 3,
+    "parameters": 66958086,
+    "best_epoch": 3,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.729,
+        "val_accuracy": 0.9285,
+        "val_macro_f1": 0.897
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.1545,
+        "val_accuracy": 0.937,
+        "val_macro_f1": 0.9075
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.1057,
+        "val_accuracy": 0.9425,
+        "val_macro_f1": 0.9146
+      }
+    ],
+    "train_seconds": 103.65,
+    "peak_gpu_gb": 1.29,
+    "validation": {
+      "accuracy": 0.9425,
+      "macro_f1": 0.9146,
+      "weighted_f1": 0.9424,
+      "per_class": {
+        "sadness": {
+          "precision": 0.9694,
+          "recall": 0.9782,
+          "f1": 0.9738,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.9655,
+          "recall": 0.9531,
+          "f1": 0.9593,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.8656,
+          "recall": 0.9045,
+          "f1": 0.8846,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.9395,
+          "recall": 0.96,
+          "f1": 0.9496,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8981,
+          "recall": 0.8726,
+          "f1": 0.8852,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 0.8571,
+          "recall": 0.8148,
+          "f1": 0.8354,
+          "support": 81
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.9265,
+      "macro_f1": 0.8873,
+      "weighted_f1": 0.9266,
+      "per_class": {
+        "sadness": {
+          "precision": 0.9606,
+          "recall": 0.9656,
+          "f1": 0.9631,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.9559,
+          "recall": 0.9353,
+          "f1": 0.9455,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.7955,
+          "recall": 0.8805,
+          "f1": 0.8358,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.9097,
+          "recall": 0.9164,
+          "f1": 0.913,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8982,
+          "recall": 0.9062,
+          "f1": 0.9022,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 0.8246,
+          "recall": 0.7121,
+          "f1": 0.7642,
+          "support": 66
+        }
+      }
+    },
+    "inference": {
+      "predict_total_ms": 650.05,
+      "predict_ms_per_example": 0.325
+    }
+  }
+}
