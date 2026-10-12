@@ -1,0 +1,99 @@
+{
+  "experiment": "baseline_random_forest_balanced",
+  "timestamp_utc": "2026-10-12T06:28:32.223114+00:00",
+  "metrics": {
+    "model": "random_forest_balanced",
+    "features": 50000,
+    "train_seconds": 6.7663,
+    "validation": {
+      "accuracy": 0.877,
+      "macro_f1": 0.8592,
+      "weighted_f1": 0.8777,
+      "per_class": {
+        "sadness": {
+          "precision": 0.9294,
+          "recall": 0.8618,
+          "f1": 0.8943,
+          "support": 550
+        },
+        "joy": {
+          "precision": 0.8999,
+          "recall": 0.8935,
+          "f1": 0.8967,
+          "support": 704
+        },
+        "love": {
+          "precision": 0.771,
+          "recall": 0.927,
+          "f1": 0.8418,
+          "support": 178
+        },
+        "anger": {
+          "precision": 0.8843,
+          "recall": 0.8618,
+          "f1": 0.8729,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.8174,
+          "recall": 0.8443,
+          "f1": 0.8306,
+          "support": 212
+        },
+        "surprise": {
+          "precision": 0.7778,
+          "recall": 0.8642,
+          "f1": 0.8187,
+          "support": 81
+        }
+      }
+    },
+    "test": {
+      "accuracy": 0.8645,
+      "macro_f1": 0.8309,
+      "weighted_f1": 0.8666,
+      "per_class": {
+        "sadness": {
+          "precision": 0.9363,
+          "recall": 0.8606,
+          "f1": 0.8969,
+          "support": 581
+        },
+        "joy": {
+          "precision": 0.8909,
+          "recall": 0.8691,
+          "f1": 0.8798,
+          "support": 695
+        },
+        "love": {
+          "precision": 0.6829,
+          "recall": 0.8805,
+          "f1": 0.7692,
+          "support": 159
+        },
+        "anger": {
+          "precision": 0.8843,
+          "recall": 0.8618,
+          "f1": 0.8729,
+          "support": 275
+        },
+        "fear": {
+          "precision": 0.834,
+          "recall": 0.875,
+          "f1": 0.854,
+          "support": 224
+        },
+        "surprise": {
+          "precision": 0.65,
+          "recall": 0.7879,
+          "f1": 0.7123,
+          "support": 66
+        }
+      }
+    },
+    "inference": {
+      "predict_total_ms": 58.43,
+      "predict_ms_per_example": 0.0292
+    }
+  }
+}
