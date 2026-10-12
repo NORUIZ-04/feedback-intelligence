@@ -1,0 +1,60 @@
+{
+  "experiment": "token_lengths",
+  "timestamp_utc": "2026-10-12T10:04:25.067910+00:00",
+  "metrics": {
+    "tokenizer": "distilbert-base-uncased",
+    "stats": {
+      "train": {
+        "min": 4,
+        "mean": 22.27,
+        "median": 20.0,
+        "p95": 45.0,
+        "p99": 57.0,
+        "max": 87
+      },
+      "validation": {
+        "min": 4,
+        "mean": 21.9,
+        "median": 20.0,
+        "p95": 44.0,
+        "p99": 56.0,
+        "max": 69
+      },
+      "test": {
+        "min": 5,
+        "mean": 22.21,
+        "median": 20.0,
+        "p95": 45.0,
+        "p99": 55.0,
+        "max": 66
+      }
+    },
+    "truncated_percent": {
+      "32": {
+        "train": 17.823,
+        "validation": 16.9,
+        "test": 18.65
+      },
+      "48": {
+        "train": 3.253,
+        "validation": 2.95,
+        "test": 3.2
+      },
+      "64": {
+        "train": 0.157,
+        "validation": 0.1,
+        "test": 0.15
+      },
+      "96": {
+        "train": 0.0,
+        "validation": 0.0,
+        "test": 0.0
+      },
+      "128": {
+        "train": 0.0,
+        "validation": 0.0,
+        "test": 0.0
+      }
+    }
+  }
+}

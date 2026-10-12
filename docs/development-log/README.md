@@ -8,3 +8,5 @@ Engineering notes written as the project is built: what was done, why, the comma
 | 2026-10-12 | [Data pipeline and dataset analysis](2026-10-12-data-pipeline.md) | Cleaned splits, dataset profile and plots saved to results |
 
 | 2026-10-12 | [Classic ML baselines](2026-10-12-classic-baselines.md) | Majority floor, LogReg, SVM, Random Forest, class weighting and C sweep; best baseline balanced Linear SVM (0.891 accuracy, 0.8441 macro-F1) |
+
+| 2026-10-12 | [Transformer fine-tuning](2026-10-12-transformer-finetuning.md) | DistilBERT test accuracy 0.9265, macro-F1 0.8873 (unweighted) and 0.8903 (weighted), versus 0.891 and 0.8441 for the best classic model |
