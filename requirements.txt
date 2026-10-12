@@ -2,3 +2,6 @@ pyyaml
 python-dotenv
 pytest
 ruff
+datasets
+pandas
+matplotlib
