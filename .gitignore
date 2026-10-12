@@ -7,3 +7,4 @@ models/
 wandb/
 .pytest_cache/
 .ruff_cache/
+data/processed/

@@ -1,0 +1,193 @@
+{
+  "experiment": "data_profile",
+  "timestamp_utc": "2026-10-12T06:08:49.042206+00:00",
+  "metrics": {
+    "dataset": "dair-ai/emotion",
+    "labels": [
+      "sadness",
+      "joy",
+      "love",
+      "anger",
+      "fear",
+      "surprise"
+    ],
+    "raw": {
+      "train": {
+        "rows": 16000,
+        "class_counts": {
+          "sadness": 4666,
+          "joy": 5362,
+          "love": 1304,
+          "anger": 2159,
+          "fear": 1937,
+          "surprise": 572
+        },
+        "class_pct": {
+          "sadness": 29.16,
+          "joy": 33.51,
+          "love": 8.15,
+          "anger": 13.49,
+          "fear": 12.11,
+          "surprise": 3.58
+        },
+        "imbalance_ratio": 9.37,
+        "words": {
+          "min": 2,
+          "mean": 19.17,
+          "median": 17.0,
+          "p95": 41.0,
+          "max": 66
+        }
+      },
+      "validation": {
+        "rows": 2000,
+        "class_counts": {
+          "sadness": 550,
+          "joy": 704,
+          "love": 178,
+          "anger": 275,
+          "fear": 212,
+          "surprise": 81
+        },
+        "class_pct": {
+          "sadness": 27.5,
+          "joy": 35.2,
+          "love": 8.9,
+          "anger": 13.75,
+          "fear": 10.6,
+          "surprise": 4.05
+        },
+        "imbalance_ratio": 8.69,
+        "words": {
+          "min": 2,
+          "mean": 18.87,
+          "median": 17.0,
+          "p95": 40.0,
+          "max": 61
+        }
+      },
+      "test": {
+        "rows": 2000,
+        "class_counts": {
+          "sadness": 581,
+          "joy": 695,
+          "love": 159,
+          "anger": 275,
+          "fear": 224,
+          "surprise": 66
+        },
+        "class_pct": {
+          "sadness": 29.05,
+          "joy": 34.75,
+          "love": 7.95,
+          "anger": 13.75,
+          "fear": 11.2,
+          "surprise": 3.3
+        },
+        "imbalance_ratio": 10.53,
+        "words": {
+          "min": 3,
+          "mean": 19.15,
+          "median": 17.0,
+          "p95": 41.0,
+          "max": 61
+        }
+      }
+    },
+    "cleaning": {
+      "empty_rows_removed": {
+        "train": 0,
+        "validation": 0,
+        "test": 0
+      },
+      "train_removed_conflicting_labels": 60,
+      "train_removed_duplicates": 1,
+      "train_removed_leakage": 16,
+      "validation_test_overlap_texts": 3,
+      "train_rows_final": 15923
+    },
+    "clean": {
+      "train": {
+        "rows": 15923,
+        "class_counts": {
+          "sadness": 4661,
+          "joy": 5340,
+          "love": 1283,
+          "anger": 2152,
+          "fear": 1923,
+          "surprise": 564
+        },
+        "class_pct": {
+          "sadness": 29.27,
+          "joy": 33.54,
+          "love": 8.06,
+          "anger": 13.52,
+          "fear": 12.08,
+          "surprise": 3.54
+        },
+        "imbalance_ratio": 9.47,
+        "words": {
+          "min": 2,
+          "mean": 19.18,
+          "median": 17.0,
+          "p95": 41.0,
+          "max": 66
+        }
+      },
+      "validation": {
+        "rows": 2000,
+        "class_counts": {
+          "sadness": 550,
+          "joy": 704,
+          "love": 178,
+          "anger": 275,
+          "fear": 212,
+          "surprise": 81
+        },
+        "class_pct": {
+          "sadness": 27.5,
+          "joy": 35.2,
+          "love": 8.9,
+          "anger": 13.75,
+          "fear": 10.6,
+          "surprise": 4.05
+        },
+        "imbalance_ratio": 8.69,
+        "words": {
+          "min": 2,
+          "mean": 18.87,
+          "median": 17.0,
+          "p95": 40.0,
+          "max": 61
+        }
+      },
+      "test": {
+        "rows": 2000,
+        "class_counts": {
+          "sadness": 581,
+          "joy": 695,
+          "love": 159,
+          "anger": 275,
+          "fear": 224,
+          "surprise": 66
+        },
+        "class_pct": {
+          "sadness": 29.05,
+          "joy": 34.75,
+          "love": 7.95,
+          "anger": 13.75,
+          "fear": 11.2,
+          "surprise": 3.3
+        },
+        "imbalance_ratio": 10.53,
+        "words": {
+          "min": 3,
+          "mean": 19.15,
+          "median": 17.0,
+          "p95": 41.0,
+          "max": 61
+        }
+      }
+    }
+  }
+}
