@@ -1,4 +1,4 @@
-pyyaml
+﻿pyyaml
 python-dotenv
 pytest
 ruff
@@ -7,3 +7,6 @@ pandas
 matplotlib
 scikit-learn
 pyarrow
+transformers==5.19.0
+# torch 2.11.0+cu128 (GPU build) is installed separately:
+# pip install torch --index-url https://download.pytorch.org/whl/cu128
