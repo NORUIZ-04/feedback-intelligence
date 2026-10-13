@@ -130,6 +130,13 @@ Rows are sorted by test macro-F1. Classic models train on CPU and use the same T
 
 Further tables (model comparison, retrieval metrics, RAG quality, API latency) will be added as each component is completed.
 
+## Published model
+
+The best fine-tuned model is on the Hugging Face Hub: [BHARATHKUMAR0409/emotion-distilbert](https://huggingface.co/BHARATHKUMAR0409/emotion-distilbert) (test accuracy 0.9265, macro-F1 0.8873).
+
+## Licenses
+
+The code in this repository is MIT licensed. The trained model and the data have their own terms: the dair-ai/emotion dataset states it "should be used for educational and research purposes only", and the model card says the same. The base model, distilbert-base-uncased, is Apache-2.0.
 ## Roadmap
 
 - [x] Project scaffold, config, logging, metrics saver, tests, linting
@@ -137,7 +144,7 @@ Further tables (model comparison, retrieval metrics, RAG quality, API latency) w
 - [x] Classic ML baselines
 - [x] Transformer fine-tuning
 - [x] Evaluation and error analysis
-- [ ] Model release on the Hugging Face Hub
+- [x] Model release on the Hugging Face Hub
 - [ ] Chunking and retrieval experiments
 - [ ] Embedding comparison and FAISS index
 - [ ] LLM answer generation with faithfulness evaluation
