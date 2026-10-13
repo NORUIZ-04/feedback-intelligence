@@ -1,0 +1,240 @@
+# Gold answer = a document plus a phrase that a retrieved chunk from that document must contain.
+questions:
+  - id: q01
+    question: "What effect does quantization have on the memory needed to load and run a model?"
+    doc: transformers_quantization
+    gold: "lowers the memory requirements of loading and using a model"
+  - id: q02
+    question: "Where can a newcomer find beginner courses about quantization?"
+    doc: transformers_quantization
+    gold: "DeepLearning.AI"
+  - id: q03
+    question: "Are there ready-made community spaces and notebooks for trying quantization?"
+    doc: transformers_quantization
+    gold: "community spaces and notebooks"
+  - id: q04
+    question: "What is fine-tuning a pretrained model?"
+    doc: transformers_fine_tuning
+    gold: "continues training a large pretrained model on a smaller dataset"
+  - id: q05
+    question: "Which object lets me set the options for a training run?"
+    doc: transformers_fine_tuning
+    gold: "provides all the options for customizing a training run"
+  - id: q06
+    question: "What do I need to build before I can start training with the Trainer?"
+    doc: transformers_fine_tuning
+    gold: "instance with all the necessary components"
+  - id: q07
+    question: "Where can I learn about custom loss functions and checkpointing when training?"
+    doc: transformers_fine_tuning
+    gold: "custom loss functions, memory-efficient evaluation, checkpointing"
+  - id: q08
+    question: "How should the text be prepared before fine-tuning?"
+    doc: transformers_fine_tuning
+    gold: "tokenize the text column the model trains on"
+  - id: q09
+    question: "How do I read an existing model card from the Hub in Python?"
+    doc: hub_model_cards
+    gold: "ModelCard.load"
+  - id: q10
+    question: "How do I publish a model card I created to the Hub?"
+    doc: hub_model_cards
+    gold: "ModelCard.push_to_hub"
+  - id: q11
+    question: "How can evaluation results be added to a card's metadata?"
+    doc: hub_model_cards
+    gold: "include evaluation results in the metadata"
+  - id: q12
+    question: "Can a model card be generated from a template file?"
+    doc: hub_model_cards
+    gold: "create Model Cards from a jinja template file"
+  - id: q13
+    question: "How can I run a pipeline over several inputs at once?"
+    doc: transformers_pipeline_tutorial
+    gold: "process batches of inputs with the `batch_size` parameter"
+  - id: q14
+    question: "Which setting decides whether a pipeline runs on a GPU or a CPU?"
+    doc: transformers_pipeline_tutorial
+    gold: "Configure the hardware type with the `device` parameter"
+  - id: q15
+    question: "What is the least I must give a pipeline to make it work?"
+    doc: transformers_pipeline_tutorial
+    gold: "only requires a task identifier, model, and the appropriate input"
+  - id: q16
+    question: "How do I avoid loading a huge dataset into memory when using a pipeline?"
+    doc: transformers_pipeline_tutorial
+    gold: "avoids immediately allocating memory for the entire dataset"
+  - id: q17
+    question: "Which tokenization algorithm is the most widely used in Transformers?"
+    doc: transformers_tokenizers_summary
+    gold: "is the most popular tokenization algorithm in Transformers"
+  - id: q18
+    question: "Which tokenizer do BERT-style models such as DistilBERT use?"
+    doc: transformers_tokenizers_summary
+    gold: "WordPiece is the tokenization algorithm for BERT-family models like DistilBERT and Electra"
+  - id: q19
+    question: "Which algorithm is second in popularity, and which models use it?"
+    doc: transformers_tokenizers_summary
+    gold: "Unigram is the second most popular tokenization algorithm in Transformers"
+  - id: q20
+    question: "How does byte-level BPE keep its base vocabulary small?"
+    doc: transformers_tokenizers_summary
+    gold: "uses 256 byte values as the base vocabulary"
+  - id: q21
+    question: "What does SentencePiece work on directly?"
+    doc: transformers_tokenizers_summary
+    gold: "applies BPE or Unigram directly on raw text"
+  - id: q22
+    question: "Is loading an audio dataset different from loading a text dataset?"
+    doc: datasets_quickstart
+    gold: "Audio datasets are loaded just like text datasets"
+  - id: q23
+    question: "Can image datasets be loaded the same way as text ones?"
+    doc: datasets_quickstart
+    gold: "Image datasets are loaded just like text datasets"
+  - id: q24
+    question: "What can the quickstart's single load function handle?"
+    doc: datasets_quickstart
+    gold: "load any text, audio, or image dataset with a single function"
+  - id: q25
+    question: "How do I order a dataset by the values in a column?"
+    doc: datasets_process
+    gold: "to sort column values according to their numerical values"
+  - id: q26
+    question: "What batch size does map use when batched processing is on?"
+    doc: datasets_process
+    gold: "The default batch size is 1000"
+  - id: q27
+    question: "How can I speed up dataset processing using several CPU processes?"
+    doc: datasets_process
+    gold: "Multiprocessing significantly speeds up processing by parallelizing processes on the CPU"
+  - id: q28
+    question: "How do I create train and test splits when my dataset has none?"
+    doc: datasets_process
+    gold: "creates train and test splits if your dataset doesn't already have them"
+  - id: q29
+    question: "In what format can I save a prepared dataset to reuse it later?"
+    doc: datasets_process
+    gold: "save it as a Hugging Face Dataset in Parquet format"
+  - id: q30
+    question: "How do I mix several datasets by alternating their examples?"
+    doc: datasets_process
+    gold: "taking alternating examples from each one"
+
+  - id: q31
+    question: "How do I upload one file to an existing repository?"
+    doc: hub_upload_models
+    gold: "you can upload a file to your repository using"
+  - id: q32
+    question: "How do I send a whole local directory to a repo?"
+    doc: hub_upload_models
+    gold: "to upload a local folder to an existing repository"
+  - id: q33
+    question: "Can I upload files from the terminal instead of Python?"
+    doc: hub_upload_models
+    gold: "command from the terminal to directly upload files to the Hub"
+  - id: q34
+    question: "What makes uploads faster when hf_xet is used?"
+    doc: hub_upload_models
+    gold: "chunk-based deduplication for faster uploads"
+  - id: q35
+    question: "How can I duplicate files between repos without re-uploading the data?"
+    doc: hub_upload_models
+    gold: "without downloading or re-uploading large data"
+  - id: q36
+    question: "What does the term inference mean?"
+    doc: hub_inference
+    gold: "Inference is the process of using a trained model to make predictions on new data"
+  - id: q37
+    question: "Which provider is chosen if I do not specify one?"
+    doc: hub_inference
+    gold: 'The default value is "auto"'
+  - id: q38
+    question: "How long does the client wait for an inference call by default?"
+    doc: hub_inference
+    gold: 'will wait "indefinitely" until the inference complete'
+  - id: q39
+    question: "Is the chat completion API similar to OpenAI's client?"
+    doc: hub_inference
+    gold: "follows OpenAI's Python client syntax"
+  - id: q40
+    question: "Can I use the client with a model server running on my own machine?"
+    doc: hub_inference
+    gold: "to run chat completion with local inference servers"
+  - id: q41
+    question: "What is the hf command and which package ships it?"
+    doc: hub_cli
+    gold: "comes with a built-in CLI called `hf`"
+  - id: q42
+    question: "What is the easiest way to run the CLI without installing it?"
+    doc: hub_cli
+    gold: "The easiest way to use the `hf` CLI is with `uvx`"
+  - id: q43
+    question: "How can I see which files a download would fetch before running it?"
+    doc: hub_cli
+    gold: "check which files would be downloaded before actually downloading them"
+  - id: q44
+    question: "What should I do if I lack permission to push to a repo?"
+    doc: hub_cli
+    gold: "you must open a PR and let the authors know about the changes"
+
+  - id: q45
+    paraphrase_of: q01
+    question: "My GPU runs out of memory when I load a big model. What technique shrinks the weights?"
+    doc: transformers_quantization
+    gold: "lowers the memory requirements of loading and using a model"
+  - id: q46
+    paraphrase_of: q04
+    question: "I have a general language model and a small set of my own examples. How do I adapt the model to them?"
+    doc: transformers_fine_tuning
+    gold: "continues training a large pretrained model on a smaller dataset"
+  - id: q47
+    paraphrase_of: q09
+    question: "I want to see the description page someone wrote for a model on the Hub, from code. What call fetches it?"
+    doc: hub_model_cards
+    gold: "ModelCard.load"
+  - id: q48
+    paraphrase_of: q13
+    question: "My classifier is slow when I feed texts one by one. Can I send many at a time?"
+    doc: transformers_pipeline_tutorial
+    gold: "process batches of inputs with the `batch_size` parameter"
+  - id: q49
+    paraphrase_of: q18
+    question: "Which splitting method does DistilBERT's vocabulary rely on?"
+    doc: transformers_tokenizers_summary
+    gold: "WordPiece is the tokenization algorithm for BERT-family models like DistilBERT and Electra"
+  - id: q50
+    paraphrase_of: q26
+    question: "When I apply a function to rows in groups, how many rows are in each group unless I change it?"
+    doc: datasets_process
+    gold: "The default batch size is 1000"
+  - id: q51
+    paraphrase_of: q28
+    question: "My data came as one big table with no held-out portion. How can I carve one out?"
+    doc: datasets_process
+    gold: "creates train and test splits if your dataset doesn't already have them"
+  - id: q52
+    paraphrase_of: q31
+    question: "Which function pushes a single local file into a model repo I already made?"
+    doc: hub_upload_models
+    gold: "you can upload a file to your repository using"
+  - id: q53
+    paraphrase_of: q37
+    question: "If I don't pick who runs my inference request, what does the client choose?"
+    doc: hub_inference
+    gold: 'The default value is "auto"'
+  - id: q54
+    paraphrase_of: q38
+    question: "Will my request ever give up on its own if I leave the settings alone?"
+    doc: hub_inference
+    gold: 'will wait "indefinitely" until the inference complete'
+  - id: q55
+    paraphrase_of: q42
+    question: "I don't want to install anything. How can I still try the command-line tool?"
+    doc: hub_cli
+    gold: "The easiest way to use the `hf` CLI is with `uvx`"
+  - id: q56
+    paraphrase_of: q43
+    question: "Is there a rehearsal mode that lists files without actually fetching them?"
+    doc: hub_cli
+    gold: "check which files would be downloaded before actually downloading them"

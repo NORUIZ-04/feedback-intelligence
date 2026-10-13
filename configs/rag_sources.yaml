@@ -1,0 +1,28 @@
+# Documents for the RAG corpus. Raw markdown files from public GitHub repositories.
+# The license of each repository is fetched and saved next to the documents.
+licenses:
+  transformers: https://raw.githubusercontent.com/huggingface/transformers/main/LICENSE
+  datasets: https://raw.githubusercontent.com/huggingface/datasets/main/LICENSE
+  huggingface_hub: https://raw.githubusercontent.com/huggingface/huggingface_hub/main/LICENSE
+
+documents:
+  - name: transformers_pipeline_tutorial
+    url: https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/pipeline_tutorial.md
+  - name: transformers_fine_tuning
+    url: https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/training.md
+  - name: transformers_tokenizers_summary
+    url: https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/tokenizer_summary.md
+  - name: transformers_quantization
+    url: https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/quantization/overview.md
+  - name: datasets_quickstart
+    url: https://raw.githubusercontent.com/huggingface/datasets/main/docs/source/quickstart.mdx
+  - name: datasets_process
+    url: https://raw.githubusercontent.com/huggingface/datasets/main/docs/source/process.mdx
+  - name: hub_upload_models
+    url: https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/upload.md
+  - name: hub_model_cards
+    url: https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/model-cards.md
+  - name: hub_cli
+    url: https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/cli.md
+  - name: hub_inference
+    url: https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/inference.md
