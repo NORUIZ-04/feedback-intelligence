@@ -10,3 +10,6 @@ pyarrow
 transformers==5.19.0
 # torch 2.11.0+cu128 (GPU build) is installed separately:
 # pip install torch --index-url https://download.pytorch.org/whl/cu128
+requests
+sentence-transformers==6.1.0
+faiss-cpu==1.15.1
