@@ -27,3 +27,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 - Hugging Face Hub release of the fine-tuned DistilBERT with a generated model card, load-back verification and tests.
 - Corrected the published model license to reflect the dataset's educational and research use restriction; added dataset citation.
+
+- RAG corpus of ten Apache-2.0 documentation pages with license capture, cleaning and a 56-question labelled set (44 original, 12 paraphrase) with verified gold phrases.
+- Chunking experiments (200, 500, 1000 characters) with gold coverage, and retrieval evaluation (Recall@k, MRR, equal-context-budget recall) for TF-IDF, MiniLM, BGE-small and hybrid retrievers.
+- Tests for chunking, retrieval metrics, rank fusion and the question set.

@@ -1,0 +1,76 @@
+{
+  "experiment": "rag_corpus_clean",
+  "timestamp_utc": "2026-10-13T05:32:10.869524+00:00",
+  "metrics": {
+    "datasets_process": {
+      "words_raw": 5279,
+      "words_clean": 5157,
+      "headings": 30,
+      "most_repeated_line": ">>> from datasets import load_dataset",
+      "most_repeated_count": 7
+    },
+    "datasets_quickstart": {
+      "words_raw": 2274,
+      "words_clean": 2018,
+      "headings": 5,
+      "most_repeated_line": "Use the [`~transformers.TFPreTrainedModel.prepare_tf_dataset",
+      "most_repeated_count": 3
+    },
+    "hub_cli": {
+      "words_raw": 14974,
+      "words_clean": 14510,
+      "headings": 354,
+      "most_repeated_line": "https://huggingface.co/Wauplin/my-cool-model/tree/main",
+      "most_repeated_count": 3
+    },
+    "hub_inference": {
+      "words_raw": 4076,
+      "words_clean": 4003,
+      "headings": 25,
+      "most_repeated_line": ">>> from huggingface_hub import InferenceClient",
+      "most_repeated_count": 8
+    },
+    "hub_model_cards": {
+      "words_raw": 1266,
+      "words_clean": 1197,
+      "headings": 20,
+      "most_repeated_line": "# Model Card for MyCoolModel",
+      "most_repeated_count": 3
+    },
+    "hub_upload_models": {
+      "words_raw": 4094,
+      "words_clean": 4027,
+      "headings": 27,
+      "most_repeated_line": ">>> from huggingface_hub import HfApi",
+      "most_repeated_count": 5
+    },
+    "transformers_fine_tuning": {
+      "words_raw": 899,
+      "words_clean": 747,
+      "headings": 6,
+      "most_repeated_line": "model_name = \"Qwen/Qwen3-0.6B\"",
+      "most_repeated_count": 2
+    },
+    "transformers_pipeline_tutorial": {
+      "words_raw": 2146,
+      "words_clean": 1952,
+      "headings": 12,
+      "most_repeated_line": "from transformers import pipeline",
+      "most_repeated_count": 13
+    },
+    "transformers_quantization": {
+      "words_raw": 1024,
+      "words_clean": 901,
+      "headings": 3,
+      "most_repeated_line": "Quantization lowers the memory requirements of loading and u",
+      "most_repeated_count": 1
+    },
+    "transformers_tokenizers_summary": {
+      "words_raw": 1270,
+      "words_clean": 1123,
+      "headings": 9,
+      "most_repeated_line": "(\"hug\", 10), (\"pug\", 5), (\"pun\", 12), (\"bun\", 4), (\"hugs\", 5",
+      "most_repeated_count": 2
+    }
+  }
+}
