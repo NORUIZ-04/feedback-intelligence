@@ -1,0 +1,90 @@
+{
+  "experiment": "hub_verification",
+  "timestamp_utc": "2026-10-12T10:42:19.426014+00:00",
+  "metrics": {
+    "repo": "BHARATHKUMAR0409/emotion-distilbert",
+    "hub_test_accuracy": 0.927,
+    "saved_test_accuracy": 0.9265,
+    "consistent_within_0_001": true,
+    "examples": [
+      {
+        "text": "i feel so helpless right now",
+        "top2": [
+          {
+            "label": "sadness",
+            "score": 0.8227
+          },
+          {
+            "label": "fear",
+            "score": 0.1624
+          }
+        ]
+      },
+      {
+        "text": "i am so happy that i got the job",
+        "top2": [
+          {
+            "label": "joy",
+            "score": 0.9879
+          },
+          {
+            "label": "anger",
+            "score": 0.005
+          }
+        ]
+      },
+      {
+        "text": "i cannot believe this just happened, i did not see that coming",
+        "top2": [
+          {
+            "label": "fear",
+            "score": 0.605
+          },
+          {
+            "label": "sadness",
+            "score": 0.1619
+          }
+        ]
+      },
+      {
+        "text": "i am furious about how they treated me",
+        "top2": [
+          {
+            "label": "anger",
+            "score": 0.9908
+          },
+          {
+            "label": "fear",
+            "score": 0.004
+          }
+        ]
+      },
+      {
+        "text": "i am terrified of what comes next",
+        "top2": [
+          {
+            "label": "fear",
+            "score": 0.9922
+          },
+          {
+            "label": "anger",
+            "score": 0.0028
+          }
+        ]
+      },
+      {
+        "text": "i feel so close to her and care about her deeply",
+        "top2": [
+          {
+            "label": "love",
+            "score": 0.9465
+          },
+          {
+            "label": "joy",
+            "score": 0.0361
+          }
+        ]
+      }
+    ]
+  }
+}
