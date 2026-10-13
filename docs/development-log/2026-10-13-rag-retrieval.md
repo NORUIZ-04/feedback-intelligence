@@ -87,7 +87,7 @@ At 200 characters, 6 of 56 questions (10.7%) can never be answered correctly bec
 | 1000 | paraphrase | 12 | 0.1667 | 0.25 | 0.3333 | 0.2111 |
 | 1000 | all | 56 | 0.5714 | 0.7679 | 0.8036 | 0.6688 |
 
-With TF-IDF, originals scored far above paraphrases (Recall@5 0.9318 vs 0.3333 at 1000 characters), so the original scores are inflated by wording overlap. Larger chunks also win partly because top-5 at 1000 characters returns up to 5,000 characters of text; the equal-budget table below corrects for that.
+With TF-IDF, originals scored far above paraphrases (Recall@5 0.9318 vs 0.3333 at 1000 characters), so the original scores are inflated by wording overlap. Larger chunks also win partly because top-5 at 1000 characters returns up to 5,000 characters of text; the equal-budget table below corrects for that. The MRR values here differ slightly from section 6 because this first script scored only the top 5 and the later one scores the top 15 (Recall@5 is identical in both).
 
 ## 6. Embeddings, hybrid and equal-budget comparison (`src/rag/compare_retrievers.py`)
 Models: `sentence-transformers/all-MiniLM-L6-v2` and `BAAI/bge-small-en-v1.5` (BGE queries use its recommended search prefix). Hybrid is reciprocal rank fusion (constant 60) of TF-IDF and BGE-small. Chunks and queries are embedded with normalised vectors and scored by dot product.
@@ -149,7 +149,7 @@ Search is exact (NumPy dot product, or TF-IDF cosine). Hybrid is reciprocal rank
 | Originals score above paraphrases | Right, by a large margin |
 | 200 characters scores lowest | Right |
 | 500 vs 1000 characters was an open question | 1000 won with TF-IDF |
-| Embeddings improve paraphrase recall over TF-IDF | See the computed findings above |
+| Embeddings improve paraphrase recall over TF-IDF | Only partly: BGE-small beat TF-IDF at 500 characters (0.4167 vs 0.25, 5 vs 3 of 12 questions), not at 200 or 1000. Overall MRR was best for TF-IDF at 1000 characters |
 | (My own error) I counted 28 questions after batch 2 | There were 30 |
 | (My own error) A unit test expected MRR 0.3333 for ranks [1, None, 3, 6] | Correct value is 0.375; the test was wrong, not the code |
 
@@ -169,8 +169,8 @@ Search is exact (NumPy dot product, or TF-IDF cosine). Hybrid is reciprocal rank
 | Output appeared twice after batch 3 | Pasted twice; 56 unique IDs confirmed no double append | Added a unique-ID check |
 | Gold phrases touching glued words | Tag removal joins words | Gold phrases chosen from clean parts of sentences and verified by script |
 | Question count miscounted by me | Arithmetic slip | Corrected to 30 at that point; script reports counts |
-| Ruff ISC004 on implicit string concatenation in lists | Adjacent string literals inside list literals | Wrapped each pair in parentheses |
-| MRR unit test failed (0.375 vs 0.3333) | Wrong expected value in the test; the rank-6 hit contributes 1/6 | Corrected the expected value to 0.375 |
+| Ruff ISC004 risk in drafted code | Adjacent string literals inside list literals | Caught while drafting, parenthesised before the run; ruff passed on the first run |
+| Wrong expected MRR in a drafted unit test (0.3333 vs 0.375) | The rank-6 hit contributes 1/6 | Caught while drafting, corrected to 0.375 before the run; the test never failed on your machine |
 
 ## Verification (real terminal output)
 ```
