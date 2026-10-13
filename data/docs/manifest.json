@@ -1,0 +1,79 @@
+{
+  "licenses": {
+    "transformers": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/main/LICENSE",
+      "first_line": "Copyright 2018- The Hugging Face team. All rights reserved."
+    },
+    "datasets": {
+      "url": "https://raw.githubusercontent.com/huggingface/datasets/main/LICENSE",
+      "first_line": "Apache License"
+    },
+    "huggingface_hub": {
+      "url": "https://raw.githubusercontent.com/huggingface/huggingface_hub/main/LICENSE",
+      "first_line": "Apache License"
+    }
+  },
+  "documents": {
+    "transformers_pipeline_tutorial": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/pipeline_tutorial.md",
+      "characters": 17059,
+      "words": 2146,
+      "sha256": "5044abb04c77a2554c9e9259c62dc9d121aca561885ce2bde16e6be5bbb0fdec"
+    },
+    "transformers_fine_tuning": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/training.md",
+      "characters": 7830,
+      "words": 899,
+      "sha256": "9c949acef2ca72e8a8272f0270ec52b6fad1c007e89c7a1d4fdb4cf6a1c15229"
+    },
+    "transformers_tokenizers_summary": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/tokenizer_summary.md",
+      "characters": 8577,
+      "words": 1270,
+      "sha256": "f9c73212d27f9af6e98f195448da7ffb04953a3742630aa98932843c1e2f4ccc"
+    },
+    "transformers_quantization": {
+      "url": "https://raw.githubusercontent.com/huggingface/transformers/main/docs/source/en/quantization/overview.md",
+      "characters": 10484,
+      "words": 1024,
+      "sha256": "8142a14f6f17b5b24e6603b74851f427b2913066ac2e17419675f65f13209d2a"
+    },
+    "datasets_quickstart": {
+      "url": "https://raw.githubusercontent.com/huggingface/datasets/main/docs/source/quickstart.mdx",
+      "characters": 18724,
+      "words": 2274,
+      "sha256": "57cad66aad8025881428763fdc75f25dc8e94d7f26e037df2cba7cb6694ed0bc"
+    },
+    "datasets_process": {
+      "url": "https://raw.githubusercontent.com/huggingface/datasets/main/docs/source/process.mdx",
+      "characters": 39531,
+      "words": 5279,
+      "sha256": "6a746cb7aa0e508340534b63d7d203a56d2bd50ed43018347be0ff262d3f0e2b"
+    },
+    "hub_upload_models": {
+      "url": "https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/upload.md",
+      "characters": 28774,
+      "words": 4094,
+      "sha256": "3a8601faccfc9b1b5b9c668d4561177b5b5c8409792234a196a1e7b62d2cfefe"
+    },
+    "hub_model_cards": {
+      "url": "https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/model-cards.md",
+      "characters": 10343,
+      "words": 1266,
+      "sha256": "cbcaa234c492f44cd5e211f4da05e38cd3faa89b8097d9f87f81e34f30f373a8"
+    },
+    "hub_cli": {
+      "url": "https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/cli.md",
+      "characters": 105811,
+      "words": 14974,
+      "sha256": "8c058dc08259d7dca3b023d5880387300987450960bd92dc6c21fd6e1ba77dcf"
+    },
+    "hub_inference": {
+      "url": "https://raw.githubusercontent.com/huggingface/huggingface_hub/main/docs/source/en/guides/inference.md",
+      "characters": 32249,
+      "words": 4076,
+      "sha256": "fd2a799ff89eb6cc2f2d0a347bce428028bab594cffcf319738c222fb8035d42"
+    }
+  },
+  "failed": {}
+}
