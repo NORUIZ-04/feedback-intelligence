@@ -3,6 +3,9 @@
 import re
 
 ABSTAIN = "i could not find this in the documents"
+FIND = re.compile(r"\b(could not|couldn't|cannot|can't|can not|unable to) find\b")
+NOT_CONTAIN = re.compile(r"\b(do|does) not (contain|mention|provide|include)\b")
+SOURCE = re.compile(r"\b(documents?|passages?|provided)\b")
 STOP = {
     "the", "a", "an", "of", "to", "in", "is", "are", "and", "or", "for", "on", "with",
     "that", "this", "it", "as", "be", "by", "at", "from", "you", "can", "your", "if",
@@ -13,8 +16,23 @@ def words(text: str) -> list[str]:
     return [w for w in re.findall(r"[a-z0-9_.]+", text.lower()) if w not in STOP]
 
 
-def is_abstain(answer: str) -> bool:
+def is_exact_abstain(answer: str) -> bool:
     return ABSTAIN in " ".join(answer.lower().split())
+
+
+def first_sentence(text: str) -> str:
+    return re.split(r"(?<=[.!?])\s|\n", text.strip(), maxsplit=1)[0]
+
+
+def is_abstain(answer: str) -> bool:
+    """Exact refusal sentence anywhere, or a close variant in the FIRST sentence only."""
+    text = " ".join(answer.lower().split())
+    if ABSTAIN in text:
+        return True
+    first = first_sentence(text)
+    if not SOURCE.search(first):
+        return False
+    return bool(FIND.search(first) or NOT_CONTAIN.search(first))
 
 
 def keyword_overlap(answer: str, gold: str) -> float:

@@ -90,3 +90,31 @@ def test_paraphrases_point_at_existing_originals_with_same_gold():
         if "paraphrase_of" in q:
             original = questions[q["paraphrase_of"]]
             assert original["gold"] == q["gold"] and original["doc"] == q["doc"], q["id"]
+
+
+def test_split_halves_keeps_paraphrases_with_their_original():
+    from src.rag.evaluate_rerank import split_halves
+
+    answerable = [
+        {"id": "a", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "b", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "a2", "paraphrase_of": "a", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "b2", "paraphrase_of": "b", "question": "q", "doc": "d", "gold": "g"},
+    ]
+    unanswerable = [{"id": f"u{i}", "question": "q", "check_terms": ["x"]} for i in range(4)]
+    half = split_halves(answerable, unanswerable)
+    assert half["a"] == half["a2"] and half["b"] == half["b2"]
+    assert sorted(half[f"u{i}"] for i in range(4)).count("dev") == 2
+
+
+def test_choose_threshold_separates_clean_groups():
+    from src.rag.evaluate_rerank import choose_threshold
+
+    rows = [
+        {"kind": "original", "top_score": 0.9},
+        {"kind": "original", "top_score": 0.8},
+        {"kind": "unanswerable", "top_score": 0.1},
+        {"kind": "unanswerable", "top_score": 0.2},
+    ]
+    thr = choose_threshold(rows)
+    assert 0.2 < thr <= 0.8

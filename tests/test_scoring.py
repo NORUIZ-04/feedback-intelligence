@@ -42,3 +42,31 @@ def test_abstaining_on_answerable_is_not_correct():
 def test_unanswerable_scoring():
     assert score_unanswerable("I could not find this in the documents.")["abstained"]
     assert score_unanswerable("Use LoRA with PEFT.")["hallucinated"]
+
+def test_abstain_accepts_close_variants():
+    assert is_abstain("I could not find this information in the documents provided.")
+    assert is_abstain("The provided passages do not contain information about who founded it.")
+    assert is_abstain("I can't find that in the passages.")
+
+
+def test_abstain_does_not_fire_on_real_answers():
+    assert not is_abstain("Use the --verbose flag to print extra details [1].")
+    assert not is_abstain("The default batch size is 1000 [2].")
+    assert not is_abstain("You cannot find it elsewhere, but set batch_size=8 [1].")
+
+
+def test_refusal_later_in_the_answer_does_not_count():
+    answer = "To evaluate a model you would use the batch method. The provided passages do not cover it."
+    assert not is_abstain(answer)
+
+
+def test_refusal_in_first_sentence_counts_even_with_citation_or_followup():
+    assert is_abstain("The passage does not provide the number of parameters [3]. Check the model card.")
+    assert is_abstain("The provided passages do not contain this. You would typically call add_tokens.")
+
+
+def test_first_sentence_split():
+    from src.rag.scoring import first_sentence
+
+    assert first_sentence("One. Two.") == "One."
+    assert first_sentence("Line one\nLine two") == "Line one"
