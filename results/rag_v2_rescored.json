@@ -1,0 +1,120 @@
+{
+  "experiment": "rag_v2_rescored",
+  "timestamp_utc": "2026-10-14T10:30:39.354880+00:00",
+  "metrics": {
+    "summary": {
+      "Qwen 1.5B": {
+        "sanity_mismatches": 0,
+        "correct": [
+          24,
+          24
+        ],
+        "wrong_abstentions": [
+          1,
+          1
+        ],
+        "refused": [
+          4,
+          5
+        ],
+        "n_answerable": 72,
+        "n_unanswerable": 32,
+        "groups": {
+          "adjacent": [
+            7,
+            0,
+            0
+          ],
+          "control": [
+            2,
+            2,
+            2
+          ],
+          "first_batch": [
+            12,
+            2,
+            2
+          ],
+          "on_topic": [
+            11,
+            0,
+            1
+          ]
+        }
+      },
+      "Phi-3.5-mini 4-bit": {
+        "sanity_mismatches": 0,
+        "correct": [
+          36,
+          36
+        ],
+        "wrong_abstentions": [
+          0,
+          0
+        ],
+        "refused": [
+          15,
+          18
+        ],
+        "n_answerable": 72,
+        "n_unanswerable": 32,
+        "groups": {
+          "adjacent": [
+            7,
+            5,
+            5
+          ],
+          "control": [
+            2,
+            1,
+            2
+          ],
+          "first_batch": [
+            12,
+            7,
+            7
+          ],
+          "on_topic": [
+            11,
+            2,
+            4
+          ]
+        }
+      }
+    },
+    "changed": {
+      "Qwen 1.5B": [
+        {
+          "id": "u13",
+          "group": "unanswerable_on_topic",
+          "was": false,
+          "now": true,
+          "answer": "The passage does not provide information about the number of parameters in DistilBERT. [4]"
+        }
+      ],
+      "Phi-3.5-mini 4-bit": [
+        {
+          "id": "u13",
+          "group": "unanswerable_on_topic",
+          "was": false,
+          "now": true,
+          "answer": "The passage does not provide the exact number of parameters for DistilBERT [3]. To find this information, you would typically refer to the model's documentation or specifications."
+        },
+        {
+          "id": "u16",
+          "group": "unanswerable_on_topic",
+          "was": false,
+          "now": true,
+          "answer": "The provided passages do not contain specific instructions on how to add new special tokens to a tokenizer. To add new special tokens, you typically need to use methods provided by the tokenizer class, which often involves using a method like `add_special_tokens` if available. Since the passages do not directly address this, I could not find the answer in the documents."
+        },
+        {
+          "id": "u34",
+          "group": "unanswerable_control",
+          "was": false,
+          "now": true,
+          "answer": "I could not find this information in the documents provided."
+        }
+      ]
+    }
+  }
+}
