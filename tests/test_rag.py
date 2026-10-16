@@ -73,3 +73,48 @@ def test_every_gold_phrase_fits_inside_a_chunk_at_size_1000():
         by_doc.setdefault(c["doc"], []).append(c["text"])
     for q in _questions():
         assert any(normalize(q["gold"]) in t for t in by_doc[q["doc"]]), q["id"]
+
+def test_unanswerable_questions_well_formed():
+    path = Path("data/eval/unanswerable.yaml")
+    qs = yaml.safe_load(path.read_text(encoding="utf-8"))["questions"]
+    ids = [q["id"] for q in qs]
+    assert len(ids) == len(set(ids))
+    assert all(q["question"] and q["check_terms"] for q in qs)
+    answerable_ids = {q["id"] for q in _questions()}
+    assert not set(ids) & answerable_ids
+
+
+def test_paraphrases_point_at_existing_originals_with_same_gold():
+    questions = {q["id"]: q for q in _questions()}
+    for q in questions.values():
+        if "paraphrase_of" in q:
+            original = questions[q["paraphrase_of"]]
+            assert original["gold"] == q["gold"] and original["doc"] == q["doc"], q["id"]
+
+
+def test_split_halves_keeps_paraphrases_with_their_original():
+    from src.rag.evaluate_rerank import split_halves
+
+    answerable = [
+        {"id": "a", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "b", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "a2", "paraphrase_of": "a", "question": "q", "doc": "d", "gold": "g"},
+        {"id": "b2", "paraphrase_of": "b", "question": "q", "doc": "d", "gold": "g"},
+    ]
+    unanswerable = [{"id": f"u{i}", "question": "q", "check_terms": ["x"]} for i in range(4)]
+    half = split_halves(answerable, unanswerable)
+    assert half["a"] == half["a2"] and half["b"] == half["b2"]
+    assert sorted(half[f"u{i}"] for i in range(4)).count("dev") == 2
+
+
+def test_choose_threshold_separates_clean_groups():
+    from src.rag.evaluate_rerank import choose_threshold
+
+    rows = [
+        {"kind": "original", "top_score": 0.9},
+        {"kind": "original", "top_score": 0.8},
+        {"kind": "unanswerable", "top_score": 0.1},
+        {"kind": "unanswerable", "top_score": 0.2},
+    ]
+    thr = choose_threshold(rows)
+    assert 0.2 < thr <= 0.8

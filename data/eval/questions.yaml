@@ -238,3 +238,82 @@ questions:
     question: "Is there a rehearsal mode that lists files without actually fetching them?"
     doc: hub_cli
     gold: "check which files would be downloaded before actually downloading them"
+
+  # Added 2026-10-14. q57-q60: previously drafted as unanswerable but answered in the corpus.
+  # q61-q72: casual, typo-style paraphrases (still written by the assistant).
+  - id: q57
+    question: "What learning rate does the fine-tuning example use?"
+    doc: transformers_fine_tuning
+    gold: "learning_rate=2e-5"
+  - id: q58
+    question: "What does gradient checkpointing do?"
+    doc: transformers_fine_tuning
+    gold: "trades compute for memory by recomputing intermediate activations"
+  - id: q59
+    question: "What vocabulary size does the GPT-2 tokenizer have?"
+    doc: transformers_tokenizers_summary
+    gold: "vocabulary size of 50,257"
+  - id: q60
+    question: "What does load_best_model_at_end do?"
+    doc: transformers_fine_tuning
+    gold: "loads the best checkpoint when training finishes"
+  - id: q61
+    paraphrase_of: q02
+    question: "any beginner quantizaton courses?"
+    doc: transformers_quantization
+    gold: "DeepLearning.AI"
+  - id: q62
+    paraphrase_of: q05
+    question: "whats the thing where i set all my training settings"
+    doc: transformers_fine_tuning
+    gold: "provides all the options for customizing a training run"
+  - id: q63
+    paraphrase_of: q10
+    question: "ok i wrote a card, how do i get it online"
+    doc: hub_model_cards
+    gold: "ModelCard.push_to_hub"
+  - id: q64
+    paraphrase_of: q12
+    question: "model card from a template file, possible?"
+    doc: hub_model_cards
+    gold: "create Model Cards from a jinja template file"
+  - id: q65
+    paraphrase_of: q17
+    question: "most used tokenizer type??"
+    doc: transformers_tokenizers_summary
+    gold: "is the most popular tokenization algorithm in Transformers"
+  - id: q66
+    paraphrase_of: q20
+    question: "why only 256 base tokens in byte bpe"
+    doc: transformers_tokenizers_summary
+    gold: "uses 256 byte values as the base vocabulary"
+  - id: q67
+    paraphrase_of: q25
+    question: "sort my data by a column"
+    doc: datasets_process
+    gold: "to sort column values according to their numerical values"
+  - id: q68
+    paraphrase_of: q27
+    question: "dataset map too slow, use more cores?"
+    doc: datasets_process
+    gold: "Multiprocessing significantly speeds up processing by parallelizing processes on the CPU"
+  - id: q69
+    paraphrase_of: q29
+    question: "what file type to save processed data so i can load it later"
+    doc: datasets_process
+    gold: "save it as a Hugging Face Dataset in Parquet format"
+  - id: q70
+    paraphrase_of: q34
+    question: "why is uploading faster with xet"
+    doc: hub_upload_models
+    gold: "chunk-based deduplication for faster uploads"
+  - id: q71
+    paraphrase_of: q39
+    question: "can i use openai code with this client?"
+    doc: hub_inference
+    gold: "follows OpenAI's Python client syntax"
+  - id: q72
+    paraphrase_of: q44
+    question: "no write access, how do i still contribute my files"
+    doc: hub_cli
+    gold: "you must open a PR and let the authors know about the changes"

@@ -1,0 +1,26 @@
+{
+  "experiment": "human_label_comparison",
+  "timestamp_utc": "2026-10-14T10:49:42.053389+00:00",
+  "metrics": {
+    "n": 20,
+    "answerable_pairs": {
+      "not correct|wrong": 3,
+      "not correct|correct": 4,
+      "correct|correct": 4,
+      "not correct|partial": 1
+    },
+    "unanswerable_pairs": {
+      "answered|mixed": 1,
+      "answered|answered": 3,
+      "refused|refused": 3,
+      "refused|mixed": 1
+    },
+    "disagreement_ids": [
+      "q18",
+      "q62",
+      "q16",
+      "u16",
+      "q41"
+    ]
+  }
+}

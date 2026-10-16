@@ -1,0 +1,2799 @@
+{
+  "experiment": "rag_prompt_variants_1p5b",
+  "timestamp_utc": "2026-10-13T10:44:54.347478+00:00",
+  "metrics": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "summary": {
+      "baseline": {
+        "answerable_n": 56,
+        "correct": 0.4821,
+        "correct_when_retrieved": 0.5789,
+        "number_ok": 0.6667,
+        "abstained_on_answerable": 0.0,
+        "has_citation": 0.0,
+        "citation_valid": 0.0,
+        "cited_relevant": 0.0,
+        "retrieval_hit": 0.6786,
+        "unanswerable_n": 12,
+        "abstained_correctly": 0.0,
+        "hallucinated": 1.0,
+        "mean_seconds": 3.0,
+        "correct_original": 0.5455,
+        "correct_paraphrase": 0.25,
+        "wrong_abstentions": 0,
+        "wrong_abstentions_with_retrieval_hit": 0
+      },
+      "grounded": {
+        "answerable_n": 56,
+        "correct": 0.375,
+        "correct_when_retrieved": 0.5,
+        "number_ok": 0.3333,
+        "abstained_on_answerable": 0.1964,
+        "has_citation": 0.0893,
+        "citation_valid": 0.0893,
+        "cited_relevant": 0.0714,
+        "retrieval_hit": 0.6786,
+        "unanswerable_n": 12,
+        "abstained_correctly": 0.6667,
+        "hallucinated": 0.3333,
+        "mean_seconds": 1.7,
+        "correct_original": 0.4318,
+        "correct_paraphrase": 0.1667,
+        "wrong_abstentions": 11,
+        "wrong_abstentions_with_retrieval_hit": 3
+      },
+      "grounded_v2": {
+        "retrieval_hit": 0.6786,
+        "correct": 0.3214,
+        "correct_when_retrieved": 0.4474,
+        "correct_original": 0.3864,
+        "correct_paraphrase": 0.0833,
+        "number_ok": 0.6667,
+        "abstained_on_answerable": 0.0,
+        "has_citation": 0.875,
+        "citation_valid": 0.875,
+        "cited_relevant": 0.3929,
+        "abstained_correctly": 0.25,
+        "hallucinated": 0.75,
+        "mean_seconds": 1.06,
+        "wrong_abstentions": 0,
+        "wrong_abstentions_with_retrieval_hit": 0
+      },
+      "grounded_v2_k6": {
+        "retrieval_hit": 0.7143,
+        "correct": 0.3393,
+        "correct_when_retrieved": 0.425,
+        "correct_original": 0.4091,
+        "correct_paraphrase": 0.0833,
+        "number_ok": 0.6667,
+        "abstained_on_answerable": 0.0,
+        "has_citation": 0.8929,
+        "citation_valid": 0.8929,
+        "cited_relevant": 0.3393,
+        "abstained_correctly": 0.0833,
+        "hallucinated": 0.9167,
+        "mean_seconds": 1.11,
+        "wrong_abstentions": 0,
+        "wrong_abstentions_with_retrieval_hit": 0
+      }
+    },
+    "rows": {
+      "grounded_v2": [
+        {
+          "id": "q01",
+          "kind": "original",
+          "question": "What effect does quantization have on the memory needed to load and run a model?",
+          "answer": "It reduces the memory requirements by storing the weights in a lower precision [1].",
+          "chunk_ids": [
+            "transformers_quantization-2",
+            "transformers_quantization-0",
+            "transformers_quantization-9",
+            "transformers_quantization-1"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q02",
+          "kind": "original",
+          "question": "Where can a newcomer find beginner courses about quantization?",
+          "answer": "Beginner-friendly quantization courses can be found in collaboration with DeepLearning.AI, specifically \"Quantization Fundamentals with Hugging Face\" [1].",
+          "chunk_ids": [
+            "transformers_quantization-9",
+            "transformers_quantization-1",
+            "transformers_quantization-0",
+            "transformers_quantization-2"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q03",
+          "kind": "original",
+          "question": "Are there ready-made community spaces and notebooks for trying quantization?",
+          "answer": "Yes, there are community spaces and notebooks available for trying quantization [2].",
+          "chunk_ids": [
+            "transformers_quantization-9",
+            "transformers_quantization-0",
+            "transformers_quantization-2",
+            "transformers_quantization-1"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q04",
+          "kind": "original",
+          "question": "What is fine-tuning a pretrained model?",
+          "answer": "Fine-tuning involves continuing training a large pretrained model on a smaller dataset specific to a task or domain.",
+          "chunk_ids": [
+            "transformers_fine_tuning-0",
+            "datasets_quickstart-12",
+            "datasets_quickstart-4",
+            "datasets_quickstart-30"
+          ],
+          "abstained": false,
+          "overlap": 0.857,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q05",
+          "kind": "original",
+          "question": "Which object lets me set the options for a training run?",
+          "answer": "The `TrainingArguments` class allows you to set the options for a training run [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-6",
+            "transformers_fine_tuning-10",
+            "transformers_fine_tuning-13",
+            "hub_cli-160"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q06",
+          "kind": "original",
+          "question": "What do I need to build before I can start training with the Trainer?",
+          "answer": "Before starting training with the Trainer, you need to prepare a dataset, wrap it with a HuggingFace `~datasets.Dataset`, and create a `tf.data.Dataset`.",
+          "chunk_ids": [
+            "transformers_fine_tuning-11",
+            "transformers_fine_tuning-12",
+            "datasets_quickstart-12",
+            "transformers_fine_tuning-10"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q07",
+          "kind": "original",
+          "question": "Where can I learn about custom loss functions and checkpointing when training?",
+          "answer": "Read the Trainer features guide for minimal working examples of custom loss functions and checkpointing [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-12",
+            "transformers_fine_tuning-9",
+            "transformers_fine_tuning-10",
+            "transformers_fine_tuning-13"
+          ],
+          "abstained": false,
+          "overlap": 0.571,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q08",
+          "kind": "original",
+          "question": "How should the text be prepared before fine-tuning?",
+          "answer": "Prepare the text by selecting columns such as 'text' for both datasets [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-0",
+            "transformers_pipeline_tutorial-22",
+            "transformers_pipeline_tutorial-23",
+            "datasets_process-62"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q09",
+          "kind": "original",
+          "question": "How do I read an existing model card from the Hub in Python?",
+          "answer": "Use the `ModelCard.load()` function to load an existing card from the Hub [1].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_model_cards-2",
+            "hub_model_cards-4",
+            "hub_model_cards-8"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q10",
+          "kind": "original",
+          "question": "How do I publish a model card I created to the Hub?",
+          "answer": "Use the `ModelCard.save()` method to save the card to the hub [1].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_model_cards-4",
+            "hub_model_cards-2",
+            "hub_model_cards-5"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q11",
+          "kind": "original",
+          "question": "How can evaluation results be added to a card's metadata?",
+          "answer": "Pass the evaluation results as an EvalResult object or a list of EvalResult objects under the `results` key in the card data [2].",
+          "chunk_ids": [
+            "hub_model_cards-16",
+            "hub_model_cards-18",
+            "hub_cli-79",
+            "hub_model_cards-7"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q12",
+          "kind": "original",
+          "question": "Can a model card be generated from a template file?",
+          "answer": "Yes, a model card can be generated from a template file [2].",
+          "chunk_ids": [
+            "hub_model_cards-4",
+            "hub_model_cards-6",
+            "hub_model_cards-5",
+            "hub_model_cards-9"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q13",
+          "kind": "original",
+          "question": "How can I run a pipeline over several inputs at once?",
+          "answer": "The ChunkPipeline class can be used to handle large datasets by automatically batching the inputs [2].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-28",
+            "transformers_pipeline_tutorial-27",
+            "transformers_pipeline_tutorial-33",
+            "transformers_pipeline_tutorial-5"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q14",
+          "kind": "original",
+          "question": "Which setting decides whether a pipeline runs on a GPU or a CPU?",
+          "answer": "The `device` parameter decides whether a pipeline runs on a GPU or a CPU [1].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-9",
+            "transformers_pipeline_tutorial-10",
+            "transformers_pipeline_tutorial-32",
+            "transformers_pipeline_tutorial-12"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q15",
+          "kind": "original",
+          "question": "What is the least I must give a pipeline to make it work?",
+          "answer": "The least you need to provide a pipeline is a model name or path [1].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-5",
+            "transformers_pipeline_tutorial-19",
+            "transformers_pipeline_tutorial-0",
+            "transformers_pipeline_tutorial-34"
+          ],
+          "abstained": false,
+          "overlap": 0.143,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q16",
+          "kind": "original",
+          "question": "How do I avoid loading a huge dataset into memory when using a pipeline?",
+          "answer": "Set `mlm=False` to avoid randomly masking tokens and use `data_collator = DataCollatorForLanguageModeling(tokenizer, mlm=False)` [1]. Use an iterator or generator for large datasets [4].",
+          "chunk_ids": [
+            "transformers_fine_tuning-4",
+            "transformers_pipeline_tutorial-33",
+            "transformers_pipeline_tutorial-30",
+            "transformers_pipeline_tutorial-31"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q17",
+          "kind": "original",
+          "question": "Which tokenization algorithm is the most widely used in Transformers?",
+          "answer": "Byte pair encoding (BPE) is the most widely used in Transformers [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-6",
+            "transformers_tokenizers_summary-0",
+            "transformers_tokenizers_summary-11"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q18",
+          "kind": "original",
+          "question": "Which tokenizer do BERT-style models such as DistilBERT use?",
+          "answer": "BERT-style models like DistilBERT use the AutoTokenizer from the transformers library [1].",
+          "chunk_ids": [
+            "datasets_quickstart-24",
+            "transformers_tokenizers_summary-11",
+            "datasets_process-77",
+            "datasets_quickstart-23"
+          ],
+          "abstained": false,
+          "overlap": 0.444,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q19",
+          "kind": "original",
+          "question": "Which algorithm is second in popularity, and which models use it?",
+          "answer": "Unigram is second in popularity; models like T5, BigBird, Pegasus, and others use it [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-6",
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-11",
+            "hub_cli-76"
+          ],
+          "abstained": false,
+          "overlap": 0.286,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q20",
+          "kind": "original",
+          "question": "How does byte-level BPE keep its base vocabulary small?",
+          "answer": "Byte-level BPE keeps its base vocabulary small by using 256 byte values as the base vocabulary instead of mapping all characters to an unknown token [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-5",
+            "transformers_tokenizers_summary-4",
+            "transformers_tokenizers_summary-2",
+            "transformers_tokenizers_summary-10"
+          ],
+          "abstained": false,
+          "overlap": 0.833,
+          "correct": true,
+          "number_ok": true,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q21",
+          "kind": "original",
+          "question": "What does SentencePiece work on directly?",
+          "answer": "SentencePiece works on raw text directly [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-10",
+            "transformers_tokenizers_summary-11",
+            "datasets_process-78",
+            "transformers_tokenizers_summary-9"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q22",
+          "kind": "original",
+          "question": "Is loading an audio dataset different from loading a text dataset?",
+          "answer": "Yes, an audio dataset requires a feature extractor and may need resampling of the sampling rate.",
+          "chunk_ids": [
+            "datasets_quickstart-1",
+            "datasets_quickstart-4",
+            "datasets_quickstart-32",
+            "datasets_quickstart-13"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q23",
+          "kind": "original",
+          "question": "Can image datasets be loaded the same way as text ones?",
+          "answer": "Yes, image datasets are loaded similarly to text datasets, but they require a feature extractor for preprocessing.",
+          "chunk_ids": [
+            "datasets_quickstart-13",
+            "datasets_quickstart-32",
+            "datasets_quickstart-1",
+            "datasets_quickstart-21"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q24",
+          "kind": "original",
+          "question": "What can the quickstart's single load function handle?",
+          "answer": "The quickstart's single load function handles loading the Microsoft Research Paraphrase Corpus (MRPC) training dataset [1].",
+          "chunk_ids": [
+            "datasets_quickstart-32",
+            "datasets_quickstart-0",
+            "datasets_quickstart-22",
+            "transformers_pipeline_tutorial-27"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q25",
+          "kind": "original",
+          "question": "How do I order a dataset by the values in a column?",
+          "answer": "Use the `sort` method on the dataset object to sort column values according to their numerical values [1].",
+          "chunk_ids": [
+            "datasets_process-3",
+            "datasets_process-4",
+            "datasets_process-16",
+            "datasets_process-17"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q26",
+          "kind": "original",
+          "question": "What batch size does map use when batched processing is on?",
+          "answer": "The default batch size is 1000 [1].",
+          "chunk_ids": [
+            "datasets_process-60",
+            "datasets_process-37",
+            "datasets_process-61",
+            "transformers_fine_tuning-7"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": true,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q27",
+          "kind": "original",
+          "question": "How can I speed up dataset processing using several CPU processes?",
+          "answer": "Set the `num_proc` parameter in the `map` method to use multiple processes [1].",
+          "chunk_ids": [
+            "datasets_process-31",
+            "datasets_process-60",
+            "datasets_process-81",
+            "datasets_process-56"
+          ],
+          "abstained": false,
+          "overlap": 0.125,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q28",
+          "kind": "original",
+          "question": "How do I create train and test splits when my dataset has none?",
+          "answer": "The `dataset.train_test_split()` function creates train and test splits if your dataset doesn't already have them [1].",
+          "chunk_ids": [
+            "datasets_process-11",
+            "datasets_process-53",
+            "datasets_process-10",
+            "datasets_process-2"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q29",
+          "kind": "original",
+          "question": "In what format can I save a prepared dataset to reuse it later?",
+          "answer": "Parquet format [1].",
+          "chunk_ids": [
+            "datasets_process-81",
+            "datasets_process-70",
+            "datasets_process-83",
+            "hub_upload_models-46"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q30",
+          "kind": "original",
+          "question": "How do I mix several datasets by alternating their examples?",
+          "answer": "Use the `interleave_datasets` function to mix several datasets by taking alternating examples from each one [2].",
+          "chunk_ids": [
+            "datasets_process-63",
+            "datasets_process-64",
+            "datasets_process-53",
+            "datasets_process-65"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q31",
+          "kind": "original",
+          "question": "How do I upload one file to an existing repository?",
+          "answer": "Use the `upload_file` function specifying the path to the file, the path in the repository, and the repository ID [2].",
+          "chunk_ids": [
+            "hub_upload_models-52",
+            "hub_upload_models-1",
+            "hub_upload_models-2",
+            "hub_cli-45"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q32",
+          "kind": "original",
+          "question": "How do I send a whole local directory to a repo?",
+          "answer": "Use the `hf upload` command followed by the path to the local directory [1].",
+          "chunk_ids": [
+            "hub_cli-44",
+            "hub_upload_models-7",
+            "hub_upload_models-3",
+            "hub_cli-46"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q33",
+          "kind": "original",
+          "question": "Can I upload files from the terminal instead of Python?",
+          "answer": "Yes, you can use the `hf upload` command directly from the terminal [2].",
+          "chunk_ids": [
+            "hub_cli-43",
+            "hub_upload_models-59",
+            "hub_upload_models-23",
+            "hub_upload_models-17"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q34",
+          "kind": "original",
+          "question": "What makes uploads faster when hf_xet is used?",
+          "answer": "Using `hf_xet` allows for faster uploads through chunk-based deduplication and integration with Xet storage [1].",
+          "chunk_ids": [
+            "hub_upload_models-16",
+            "hub_upload_models-23",
+            "hub_upload_models-8",
+            "hub_upload_models-12"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q35",
+          "kind": "original",
+          "question": "How can I duplicate files between repos without re-uploading the data?",
+          "answer": "Use the `hf repos duplicate` command to copy an existing model, dataset, or Space to your account or another organization [2].",
+          "chunk_ids": [
+            "hub_upload_models-32",
+            "hub_cli-115",
+            "hub_cli-47",
+            "hub_cli-116"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q36",
+          "kind": "original",
+          "question": "What does the term inference mean?",
+          "answer": "Inference refers to the process of using a trained model to make predictions on new data [2].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-17",
+            "hub_inference-0",
+            "hub_inference-1",
+            "hub_inference-13"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q37",
+          "kind": "original",
+          "question": "Which provider is chosen if I do not specify one?",
+          "answer": "The default provider is \"auto\". It selects the first available provider based on the user's settings [1].",
+          "chunk_ids": [
+            "hub_inference-10",
+            "hub_inference-9",
+            "hub_inference-12",
+            "hub_inference-4"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q38",
+          "kind": "original",
+          "question": "How long does the client wait for an inference call by default?",
+          "answer": "The client waits indefinitely by default [1].",
+          "chunk_ids": [
+            "hub_inference-54",
+            "hub_inference-53",
+            "hub_inference-34",
+            "hub_inference-2"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q39",
+          "kind": "original",
+          "question": "Is the chat completion API similar to OpenAI's client?",
+          "answer": "Yes, the chat completion API follows OpenAI's Python client syntax [2].",
+          "chunk_ids": [
+            "hub_inference-17",
+            "hub_inference-30",
+            "hub_inference-29",
+            "hub_inference-16"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q40",
+          "kind": "original",
+          "question": "Can I use the client with a model server running on my own machine?",
+          "answer": "Yes, you can use a specific model by specifying it either as a parameter or directly at an instance level [1].",
+          "chunk_ids": [
+            "hub_inference-11",
+            "hub_inference-16",
+            "hub_inference-46",
+            "hub_inference-12"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q41",
+          "kind": "original",
+          "question": "What is the hf command and which package ships it?",
+          "answer": "The hf command is shipped with the core `huggingface_hub` package [3].",
+          "chunk_ids": [
+            "hub_cli-9",
+            "hub_cli-8",
+            "hub_cli-22",
+            "hub_cli-2"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q42",
+          "kind": "original",
+          "question": "What is the easiest way to run the CLI without installing it?",
+          "answer": "The easiest way to run the CLI without installing it is with `uvx`. It always runs the latest version in an isolated environment - no installation needed! Make sure `uv` is installed first. See the uv installation guide for instructions.",
+          "chunk_ids": [
+            "hub_cli-7",
+            "hub_cli-3",
+            "hub_cli-1",
+            "hub_cli-8"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q43",
+          "kind": "original",
+          "question": "How can I see which files a download would fetch before running it?",
+          "answer": "Use the `--dry-run` parameter to check which files would be downloaded without actually downloading them [1].",
+          "chunk_ids": [
+            "hub_cli-36",
+            "hub_cli-26",
+            "hub_cli-28",
+            "hub_cli-41"
+          ],
+          "abstained": false,
+          "overlap": 0.889,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q44",
+          "kind": "original",
+          "question": "What should I do if I lack permission to push to a repo?",
+          "answer": "Open a pull request (PR) and notify the authors [1].",
+          "chunk_ids": [
+            "hub_cli-52",
+            "hub_upload_models-19",
+            "hub_model_cards-15",
+            "hub_cli-116"
+          ],
+          "abstained": false,
+          "overlap": 0.375,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q45",
+          "kind": "paraphrase",
+          "question": "My GPU runs out of memory when I load a big model. What technique shrinks the weights?",
+          "answer": "Use auto-dtype to load weights in their saved dtype without doubling memory usage [2].",
+          "chunk_ids": [
+            "datasets_process-33",
+            "transformers_fine_tuning-5",
+            "transformers_pipeline_tutorial-10",
+            "transformers_quantization-2"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q46",
+          "kind": "paraphrase",
+          "question": "I have a general language model and a small set of my own examples. How do I adapt the model to them?",
+          "answer": "Load the model and use the prepare_tf_dataset method to convert your text examples into tensors [2].",
+          "chunk_ids": [
+            "datasets_quickstart-21",
+            "datasets_quickstart-17",
+            "hub_model_cards-4",
+            "hub_model_cards-18"
+          ],
+          "abstained": false,
+          "overlap": 0.143,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q47",
+          "kind": "paraphrase",
+          "question": "I want to see the description page someone wrote for a model on the Hub, from code. What call fetches it?",
+          "answer": "The `ModelCard.load` function fetches the description page for a model on the Hub [1].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_inference-5",
+            "hub_inference-14",
+            "hub_cli-114"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q48",
+          "kind": "paraphrase",
+          "question": "My classifier is slow when I feed texts one by one. Can I send many at a time?",
+          "answer": "Yes, you can use batch inference by setting `batch_size` in the pipeline.",
+          "chunk_ids": [
+            "datasets_process-52",
+            "hub_inference-53",
+            "datasets_process-10",
+            "transformers_pipeline_tutorial-13"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q49",
+          "kind": "paraphrase",
+          "question": "Which splitting method does DistilBERT's vocabulary rely on?",
+          "answer": "DistilBERT's vocabulary relies on Byte Pair Encoding (BPE).",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-11",
+            "transformers_tokenizers_summary-2",
+            "transformers_pipeline_tutorial-16"
+          ],
+          "abstained": false,
+          "overlap": 0.111,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q50",
+          "kind": "paraphrase",
+          "question": "When I apply a function to rows in groups, how many rows are in each group unless I change it?",
+          "answer": "The number of rows in each group depends on the grouping criteria applied by the function [2].",
+          "chunk_ids": [
+            "datasets_process-24",
+            "datasets_process-4",
+            "datasets_process-7",
+            "datasets_process-40"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": false,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q51",
+          "kind": "paraphrase",
+          "question": "My data came as one big table with no held-out portion. How can I carve one out?",
+          "answer": "Use the `to_split` method to create a holdout set [1].",
+          "chunk_ids": [
+            "datasets_process-84",
+            "datasets_process-75",
+            "hub_cli-184",
+            "hub_cli-85"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q52",
+          "kind": "paraphrase",
+          "question": "Which function pushes a single local file into a model repo I already made?",
+          "answer": "hf upload [2]",
+          "chunk_ids": [
+            "hub_cli-45",
+            "hub_cli-46",
+            "hub_cli-51",
+            "hub_upload_models-7"
+          ],
+          "abstained": false,
+          "overlap": 0.25,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q53",
+          "kind": "paraphrase",
+          "question": "If I don't pick who runs my inference request, what does the client choose?",
+          "answer": "The client chooses based on the user's order in the specified API settings [1].",
+          "chunk_ids": [
+            "hub_inference-34",
+            "hub_inference-51",
+            "hub_inference-2",
+            "hub_inference-10"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q54",
+          "kind": "paraphrase",
+          "question": "Will my request ever give up on its own if I leave the settings alone?",
+          "answer": "No, resuming uploads will continue until completed or manually stopped [2].",
+          "chunk_ids": [
+            "hub_cli-93",
+            "hub_upload_models-10",
+            "hub_cli-16",
+            "hub_cli-116"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q55",
+          "kind": "paraphrase",
+          "question": "I don't want to install anything. How can I still try the command-line tool?",
+          "answer": "Use the `--quiet` option when downloading to suppress detailed output [2].",
+          "chunk_ids": [
+            "hub_cli-144",
+            "hub_cli-41",
+            "hub_inference-50",
+            "hub_cli-202"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q56",
+          "kind": "paraphrase",
+          "question": "Is there a rehearsal mode that lists files without actually fetching them?",
+          "answer": "Yes, dry-run mode allows checking what files will be downloaded without actual downloading [4].",
+          "chunk_ids": [
+            "hub_cli-80",
+            "hub_cli-87",
+            "hub_cli-77",
+            "hub_cli-36"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "u01",
+          "kind": "unanswerable",
+          "question": "What is the monthly price of a Hugging Face Pro subscription?",
+          "answer": "The amount of credits you get depends on your type of account (Free or PRO or Enterprise Hub) [3].",
+          "chunk_ids": [
+            "hub_inference-18",
+            "hub_cli-164",
+            "hub_inference-51",
+            "hub_inference-17"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u02",
+          "kind": "unanswerable",
+          "question": "How do I train a model with reinforcement learning from human feedback using TRL?",
+          "answer": "I could not find this in the documents.",
+          "chunk_ids": [
+            "datasets_quickstart-21",
+            "datasets_quickstart-12",
+            "transformers_fine_tuning-11",
+            "datasets_quickstart-32"
+          ],
+          "abstained": true,
+          "hallucinated": false
+        },
+        {
+          "id": "u03",
+          "kind": "unanswerable",
+          "question": "Which GPU model is required to run Llama 3 70B in 4-bit?",
+          "answer": "CUDA GPU [1]",
+          "chunk_ids": [
+            "hub_cli-226",
+            "transformers_quantization-3",
+            "hub_cli-228",
+            "transformers_quantization-2"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u04",
+          "kind": "unanswerable",
+          "question": "How do I deploy a model on AWS SageMaker with the Hugging Face estimator?",
+          "answer": "Use the InferenceEndpoints feature to deploy models to production [2].",
+          "chunk_ids": [
+            "hub_inference-14",
+            "hub_inference-18",
+            "hub_inference-1",
+            "hub_cli-164"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u05",
+          "kind": "unanswerable",
+          "question": "What is the maximum size of a single file on the Hub free plan?",
+          "answer": "The maximum size of a single file on the Hub free plan is not explicitly stated but typically depends on the storage limits of the service. For detailed information, refer to the official documentation.",
+          "chunk_ids": [
+            "hub_upload_models-51",
+            "hub_upload_models-59",
+            "hub_upload_models-60",
+            "hub_upload_models-32"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u06",
+          "kind": "unanswerable",
+          "question": "How do I fine-tune a model with LoRA using the PEFT library?",
+          "answer": "Fine-tune a model with LoRA using the PEFT library involves loading the model on the fly, fine-tuning it with PEFT, compiling it with torch.compile(), or saving the quantized result. The picker shows whether the model fits in memory at each precision, including the KV cache, and the Compare view lists the methods that match.",
+          "chunk_ids": [
+            "datasets_quickstart-12",
+            "transformers_quantization-2",
+            "datasets_quickstart-19",
+            "hub_cli-76"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u07",
+          "kind": "unanswerable",
+          "question": "How do I export a transformers model to ONNX format?",
+          "answer": "The `onnx/model_safetensors` files are available for download [1].",
+          "chunk_ids": [
+            "hub_cli-38",
+            "datasets_quickstart-19",
+            "datasets_process-84",
+            "datasets_quickstart-30"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u08",
+          "kind": "unanswerable",
+          "question": "Which language is the Rust tokenizers library written in and how do I build it?",
+          "answer": "The Rust tokenizers library is written in Rust. To build it, you can use Cargo, the package manager for Rust. First, install Cargo if you haven't already done so. Then, navigate to the directory containing the source code and run `cargo build`.",
+          "chunk_ids": [
+            "hub_upload_models-24",
+            "hub_model_cards-4",
+            "hub_upload_models-22",
+            "transformers_tokenizers_summary-2"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u09",
+          "kind": "unanswerable",
+          "question": "How do I evaluate a model with the lm-evaluation-harness?",
+          "answer": "Use the EvalResult to include evaluation results in the metadata [2].",
+          "chunk_ids": [
+            "hub_model_cards-16",
+            "transformers_fine_tuning-9",
+            "hub_model_cards-18",
+            "datasets_process-33"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u10",
+          "kind": "unanswerable",
+          "question": "What is the context window of the Qwen2.5 models?",
+          "answer": "I could not find this in the documents.",
+          "chunk_ids": [
+            "hub_inference-38",
+            "hub_inference-46",
+            "hub_model_cards-13",
+            "hub_inference-45"
+          ],
+          "abstained": true,
+          "hallucinated": false
+        },
+        {
+          "id": "u11",
+          "kind": "unanswerable",
+          "question": "How do I enable Flash Attention 2 when loading a model?",
+          "answer": "Set `dtype=\"auto\"` to load the weights in their saved dtype. Without it, PyTorch loads weights in `torch.float32`, which doubles memory usage if the weights are originally `torch.bfloat16`.",
+          "chunk_ids": [
+            "datasets_quickstart-23",
+            "datasets_quickstart-6",
+            "transformers_fine_tuning-5",
+            "transformers_pipeline_tutorial-32"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u12",
+          "kind": "unanswerable",
+          "question": "How do I set up two-factor authentication on my Hugging Face account?",
+          "answer": "I could not find this in the documents.",
+          "chunk_ids": [
+            "hub_inference-18",
+            "hub_inference-17",
+            "transformers_fine_tuning-1",
+            "hub_cli-14"
+          ],
+          "abstained": true,
+          "hallucinated": false
+        }
+      ],
+      "grounded_v2_k6": [
+        {
+          "id": "q01",
+          "kind": "original",
+          "question": "What effect does quantization have on the memory needed to load and run a model?",
+          "answer": "Quantization reduces the memory required to load and run a model by storing weights in a lower precision [1].",
+          "chunk_ids": [
+            "transformers_quantization-2",
+            "transformers_quantization-0",
+            "transformers_quantization-9",
+            "transformers_quantization-1",
+            "datasets_quickstart-23",
+            "transformers_fine_tuning-4"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q02",
+          "kind": "original",
+          "question": "Where can a newcomer find beginner courses about quantization?",
+          "answer": "Newcomers can find beginner-friendly quantization courses in collaboration with DeepLearning.AI, such as \"Quantization Fundamentals with Hugging Face\" [1].",
+          "chunk_ids": [
+            "transformers_quantization-9",
+            "transformers_quantization-1",
+            "transformers_quantization-0",
+            "transformers_quantization-2",
+            "transformers_quantization-8",
+            "datasets_quickstart-0"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q03",
+          "kind": "original",
+          "question": "Are there ready-made community spaces and notebooks for trying quantization?",
+          "answer": "Yes, you can use the Bitsandbytes Space, GGUF Space, MLX Space, and AutoQuant Notebook for a user-friendly quantization experience [2].",
+          "chunk_ids": [
+            "transformers_quantization-9",
+            "transformers_quantization-0",
+            "transformers_quantization-2",
+            "transformers_quantization-1",
+            "transformers_quantization-8",
+            "hub_cli-88"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q04",
+          "kind": "original",
+          "question": "What is fine-tuning a pretrained model?",
+          "answer": "Fine-tuning involves continuing training a large pretrained model on a smaller dataset specific to a task or domain.",
+          "chunk_ids": [
+            "transformers_fine_tuning-0",
+            "datasets_quickstart-12",
+            "datasets_quickstart-4",
+            "datasets_quickstart-30",
+            "datasets_quickstart-23",
+            "datasets_quickstart-19"
+          ],
+          "abstained": false,
+          "overlap": 0.857,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q05",
+          "kind": "original",
+          "question": "Which object lets me set the options for a training run?",
+          "answer": "The `TrainingArguments` class lets you set the options for a training run [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-6",
+            "transformers_fine_tuning-10",
+            "transformers_fine_tuning-13",
+            "hub_cli-160",
+            "hub_cli-166",
+            "hub_cli-171"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q06",
+          "kind": "original",
+          "question": "What do I need to build before I can start training with the Trainer?",
+          "answer": "Before starting training with the Trainer, you need to prepare a dataset, wrap it with a HuggingFace Dataset class, and create a `Trainer` instance with appropriate arguments [3].",
+          "chunk_ids": [
+            "transformers_fine_tuning-11",
+            "transformers_fine_tuning-12",
+            "datasets_quickstart-12",
+            "transformers_fine_tuning-10",
+            "transformers_fine_tuning-6",
+            "transformers_fine_tuning-13"
+          ],
+          "abstained": false,
+          "overlap": 0.25,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q07",
+          "kind": "original",
+          "question": "Where can I learn about custom loss functions and checkpointing when training?",
+          "answer": "Read the Trainer features guide for minimal working examples of custom loss functions and checkpointing [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-12",
+            "transformers_fine_tuning-9",
+            "transformers_fine_tuning-10",
+            "transformers_fine_tuning-13",
+            "transformers_fine_tuning-8",
+            "transformers_fine_tuning-6"
+          ],
+          "abstained": false,
+          "overlap": 0.571,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q08",
+          "kind": "original",
+          "question": "How should the text be prepared before fine-tuning?",
+          "answer": "Prepare the text by selecting columns such as 'text' for both datasets [1].",
+          "chunk_ids": [
+            "transformers_fine_tuning-0",
+            "transformers_pipeline_tutorial-22",
+            "transformers_pipeline_tutorial-23",
+            "datasets_process-62",
+            "datasets_process-50",
+            "hub_model_cards-2"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q09",
+          "kind": "original",
+          "question": "How do I read an existing model card from the Hub in Python?",
+          "answer": "Use the `ModelCard.load()` function to load an existing card from the Hub [1].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_model_cards-2",
+            "hub_model_cards-4",
+            "hub_model_cards-8",
+            "hub_model_cards-7",
+            "hub_model_cards-10"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q10",
+          "kind": "original",
+          "question": "How do I publish a model card I created to the Hub?",
+          "answer": "Publish your model card to the Hub by calling `ModelCard.push_to_hub()` [4].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_model_cards-4",
+            "hub_model_cards-2",
+            "hub_model_cards-5",
+            "hub_model_cards-7",
+            "hub_model_cards-10"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q11",
+          "kind": "original",
+          "question": "How can evaluation results be added to a card's metadata?",
+          "answer": "Pass the evaluation results as an EvalResult object or a list of EvalResult objects under the `results` key in the card data [2].",
+          "chunk_ids": [
+            "hub_model_cards-16",
+            "hub_model_cards-18",
+            "hub_cli-79",
+            "hub_model_cards-7",
+            "hub_cli-88",
+            "hub_model_cards-2"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q12",
+          "kind": "original",
+          "question": "Can a model card be generated from a template file?",
+          "answer": "Yes, a model card can be generated from a template file [2].",
+          "chunk_ids": [
+            "hub_model_cards-4",
+            "hub_model_cards-6",
+            "hub_model_cards-5",
+            "hub_model_cards-9",
+            "hub_model_cards-3",
+            "hub_model_cards-2"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q13",
+          "kind": "original",
+          "question": "How can I run a pipeline over several inputs at once?",
+          "answer": "Use an iterator or generator to run the pipeline over several inputs simultaneously [6].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-28",
+            "transformers_pipeline_tutorial-27",
+            "transformers_pipeline_tutorial-33",
+            "transformers_pipeline_tutorial-5",
+            "transformers_pipeline_tutorial-30",
+            "transformers_pipeline_tutorial-31"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q14",
+          "kind": "original",
+          "question": "Which setting decides whether a pipeline runs on a GPU or a CPU?",
+          "answer": "The `device` parameter decides whether a pipeline runs on a GPU or a CPU [1].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-9",
+            "transformers_pipeline_tutorial-10",
+            "transformers_pipeline_tutorial-32",
+            "transformers_pipeline_tutorial-12",
+            "transformers_pipeline_tutorial-13",
+            "datasets_process-36"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q15",
+          "kind": "original",
+          "question": "What is the least I must give a pipeline to make it work?",
+          "answer": "The least you must give a pipeline to make it work is an input [2].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-5",
+            "transformers_pipeline_tutorial-19",
+            "transformers_pipeline_tutorial-0",
+            "transformers_pipeline_tutorial-34",
+            "transformers_pipeline_tutorial-31",
+            "transformers_pipeline_tutorial-4"
+          ],
+          "abstained": false,
+          "overlap": 0.143,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q16",
+          "kind": "original",
+          "question": "How do I avoid loading a huge dataset into memory when using a pipeline?",
+          "answer": "Use iterators or generators to infer from large datasets directly [4].",
+          "chunk_ids": [
+            "transformers_fine_tuning-4",
+            "transformers_pipeline_tutorial-33",
+            "transformers_pipeline_tutorial-30",
+            "transformers_pipeline_tutorial-31",
+            "transformers_pipeline_tutorial-29",
+            "transformers_pipeline_tutorial-1"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q17",
+          "kind": "original",
+          "question": "Which tokenization algorithm is the most widely used in Transformers?",
+          "answer": "Byte pair encoding (BPE) is the most widely used in Transformers [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-6",
+            "transformers_tokenizers_summary-0",
+            "transformers_tokenizers_summary-11",
+            "datasets_process-77",
+            "transformers_tokenizers_summary-2"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q18",
+          "kind": "original",
+          "question": "Which tokenizer do BERT-style models such as DistilBERT use?",
+          "answer": "BertTokenizer [3].",
+          "chunk_ids": [
+            "datasets_quickstart-24",
+            "transformers_tokenizers_summary-11",
+            "datasets_process-77",
+            "datasets_quickstart-23",
+            "datasets_quickstart-25",
+            "transformers_pipeline_tutorial-16"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q19",
+          "kind": "original",
+          "question": "Which algorithm is second in popularity, and which models use it?",
+          "answer": "Unigram is second in popularity; models like T5, BigBird, Pegasus, and others use it [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-6",
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-11",
+            "hub_cli-76",
+            "transformers_tokenizers_summary-2",
+            "hub_inference-1"
+          ],
+          "abstained": false,
+          "overlap": 0.286,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q20",
+          "kind": "original",
+          "question": "How does byte-level BPE keep its base vocabulary small?",
+          "answer": "Byte-level BPE keeps its base vocabulary small by using 256 byte values as the base vocabulary instead of mapping all characters to an unknown token like `\"\"`.",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-5",
+            "transformers_tokenizers_summary-4",
+            "transformers_tokenizers_summary-2",
+            "transformers_tokenizers_summary-10",
+            "transformers_tokenizers_summary-15",
+            "transformers_tokenizers_summary-13"
+          ],
+          "abstained": false,
+          "overlap": 0.833,
+          "correct": true,
+          "number_ok": true,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q21",
+          "kind": "original",
+          "question": "What does SentencePiece work on directly?",
+          "answer": "SentencePiece works on raw text [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-10",
+            "transformers_tokenizers_summary-11",
+            "datasets_process-78",
+            "transformers_tokenizers_summary-9",
+            "datasets_quickstart-26",
+            "hub_inference-49"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q22",
+          "kind": "original",
+          "question": "Is loading an audio dataset different from loading a text dataset?",
+          "answer": "Yes, an audio dataset is preprocessed differently compared to a text dataset. An audio dataset requires a feature extractor and may need resampling of its sampling rate.",
+          "chunk_ids": [
+            "datasets_quickstart-1",
+            "datasets_quickstart-4",
+            "datasets_quickstart-32",
+            "datasets_quickstart-13",
+            "datasets_process-1",
+            "datasets_quickstart-5"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q23",
+          "kind": "original",
+          "question": "Can image datasets be loaded the same way as text ones?",
+          "answer": "Yes, image datasets can be loaded the same way as text ones [2].",
+          "chunk_ids": [
+            "datasets_quickstart-13",
+            "datasets_quickstart-32",
+            "datasets_quickstart-1",
+            "datasets_quickstart-21",
+            "datasets_quickstart-3",
+            "datasets_process-62"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q24",
+          "kind": "original",
+          "question": "What can the quickstart's single load function handle?",
+          "answer": "The quickstart's single load function handles loading the Microsoft Research Paraphrase Corpus (MRPC) training dataset [1].",
+          "chunk_ids": [
+            "datasets_quickstart-32",
+            "datasets_quickstart-0",
+            "datasets_quickstart-22",
+            "transformers_pipeline_tutorial-27",
+            "datasets_process-46",
+            "hub_cli-221"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q25",
+          "kind": "original",
+          "question": "How do I order a dataset by the values in a column?",
+          "answer": "Use the `sort` method on the dataset object to sort the data based on the specified column's values [1].",
+          "chunk_ids": [
+            "datasets_process-3",
+            "datasets_process-4",
+            "datasets_process-16",
+            "datasets_process-17",
+            "datasets_process-15",
+            "datasets_process-18"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q26",
+          "kind": "original",
+          "question": "What batch size does map use when batched processing is on?",
+          "answer": "The default batch size is 1000 [4].",
+          "chunk_ids": [
+            "datasets_process-60",
+            "datasets_process-37",
+            "datasets_process-61",
+            "transformers_fine_tuning-7",
+            "datasets_process-36",
+            "datasets_process-24"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": true,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q27",
+          "kind": "original",
+          "question": "How can I speed up dataset processing using several CPU processes?",
+          "answer": "Set the `num_proc` parameter in the `map` method to use multiple processes [1].",
+          "chunk_ids": [
+            "datasets_process-31",
+            "datasets_process-60",
+            "datasets_process-81",
+            "datasets_process-56",
+            "datasets_process-1",
+            "hub_cli-152"
+          ],
+          "abstained": false,
+          "overlap": 0.125,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q28",
+          "kind": "original",
+          "question": "How do I create train and test splits when my dataset has none?",
+          "answer": "Use the `train_test_split` function from the datasets module to create train and test splits [1].",
+          "chunk_ids": [
+            "datasets_process-11",
+            "datasets_process-53",
+            "datasets_process-10",
+            "datasets_process-2",
+            "datasets_process-3",
+            "transformers_fine_tuning-2"
+          ],
+          "abstained": false,
+          "overlap": 0.3,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q29",
+          "kind": "original",
+          "question": "In what format can I save a prepared dataset to reuse it later?",
+          "answer": "You can save your dataset to a format that can be reused later, such as Parquet [1].",
+          "chunk_ids": [
+            "datasets_process-81",
+            "datasets_process-70",
+            "datasets_process-83",
+            "hub_upload_models-46",
+            "datasets_process-82",
+            "datasets_process-68"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q30",
+          "kind": "original",
+          "question": "How do I mix several datasets by alternating their examples?",
+          "answer": "Use the `interleave_datasets` function to mix several datasets by taking alternating examples from each one [2].",
+          "chunk_ids": [
+            "datasets_process-63",
+            "datasets_process-64",
+            "datasets_process-53",
+            "datasets_process-65",
+            "datasets_quickstart-25",
+            "datasets_quickstart-17"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q31",
+          "kind": "original",
+          "question": "How do I upload one file to an existing repository?",
+          "answer": "Use the `hf upload` command followed by the repository ID, local file path, and optional path in the repository [4].",
+          "chunk_ids": [
+            "hub_upload_models-52",
+            "hub_upload_models-1",
+            "hub_upload_models-2",
+            "hub_cli-45",
+            "hub_upload_models-3",
+            "hub_upload_models-13"
+          ],
+          "abstained": false,
+          "overlap": 0.75,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q32",
+          "kind": "original",
+          "question": "How do I send a whole local directory to a repo?",
+          "answer": "Use the `hf upload` command followed by the path to the local directory [1].",
+          "chunk_ids": [
+            "hub_cli-44",
+            "hub_upload_models-7",
+            "hub_upload_models-3",
+            "hub_cli-46",
+            "hub_upload_models-14",
+            "hub_upload_models-18"
+          ],
+          "abstained": false,
+          "overlap": 0.4,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q33",
+          "kind": "original",
+          "question": "Can I upload files from the terminal instead of Python?",
+          "answer": "Yes, you can upload files from the terminal using the `hf upload` command [1].",
+          "chunk_ids": [
+            "hub_cli-43",
+            "hub_upload_models-59",
+            "hub_upload_models-23",
+            "hub_upload_models-17",
+            "hub_upload_models-60",
+            "hub_cli-49"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q34",
+          "kind": "original",
+          "question": "What makes uploads faster when hf_xet is used?",
+          "answer": "When `hf_xet` is used, uploads become faster due to chunk-based deduplication and the ability to saturate available bandwidth and CPU cores [1].",
+          "chunk_ids": [
+            "hub_upload_models-16",
+            "hub_upload_models-23",
+            "hub_upload_models-8",
+            "hub_upload_models-12",
+            "hub_upload_models-17",
+            "hub_upload_models-22"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q35",
+          "kind": "original",
+          "question": "How can I duplicate files between repos without re-uploading the data?",
+          "answer": "Use the `api.copy_files()` method to copy files between repositories [1].",
+          "chunk_ids": [
+            "hub_upload_models-32",
+            "hub_cli-115",
+            "hub_cli-47",
+            "hub_cli-116",
+            "hub_upload_models-33",
+            "hub_cli-113"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q36",
+          "kind": "original",
+          "question": "What does the term inference mean?",
+          "answer": "The term inference refers to the process of using a trained model to make predictions on new data [1].",
+          "chunk_ids": [
+            "transformers_pipeline_tutorial-17",
+            "hub_inference-0",
+            "hub_inference-1",
+            "hub_inference-13",
+            "hub_inference-54",
+            "hub_inference-35"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q37",
+          "kind": "original",
+          "question": "Which provider is chosen if I do not specify one?",
+          "answer": "The default value is \"auto\" which selects the first available provider based on the user's settings [1].",
+          "chunk_ids": [
+            "hub_inference-10",
+            "hub_inference-9",
+            "hub_inference-12",
+            "hub_inference-4",
+            "hub_inference-13",
+            "hub_inference-19"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q38",
+          "kind": "original",
+          "question": "How long does the client wait for an inference call by default?",
+          "answer": "The client waits indefinitely by default for an inference call.",
+          "chunk_ids": [
+            "hub_inference-54",
+            "hub_inference-53",
+            "hub_inference-34",
+            "hub_inference-2",
+            "hub_inference-10",
+            "hub_inference-3"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q39",
+          "kind": "original",
+          "question": "Is the chat completion API similar to OpenAI's client?",
+          "answer": "Yes, the chat completion API follows OpenAI's Python client syntax [2].",
+          "chunk_ids": [
+            "hub_inference-17",
+            "hub_inference-30",
+            "hub_inference-29",
+            "hub_inference-16",
+            "hub_inference-15",
+            "hub_inference-33"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q40",
+          "kind": "original",
+          "question": "Can I use the client with a model server running on my own machine?",
+          "answer": "Yes, you can use a specific model server running on your own machine by specifying the model directly at the instance level [2].",
+          "chunk_ids": [
+            "hub_inference-11",
+            "hub_inference-16",
+            "hub_inference-46",
+            "hub_inference-12",
+            "hub_inference-14",
+            "hub_inference-10"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q41",
+          "kind": "original",
+          "question": "What is the hf command and which package ships it?",
+          "answer": "The hf command ships with the core `huggingface_hub` package [3].",
+          "chunk_ids": [
+            "hub_cli-9",
+            "hub_cli-8",
+            "hub_cli-22",
+            "hub_cli-2",
+            "hub_cli-86",
+            "hub_cli-67"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q42",
+          "kind": "original",
+          "question": "What is the easiest way to run the CLI without installing it?",
+          "answer": "The easiest way to run the CLI without installing it is by using `uvx`. It always runs the latest version in an isolated environment [1].",
+          "chunk_ids": [
+            "hub_cli-7",
+            "hub_cli-3",
+            "hub_cli-1",
+            "hub_cli-8",
+            "hub_cli-0",
+            "hub_cli-2"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q43",
+          "kind": "original",
+          "question": "How can I see which files a download would fetch before running it?",
+          "answer": "Use the `--dry-run` parameter to check which files would be downloaded without actually doing so [2].",
+          "chunk_ids": [
+            "hub_cli-36",
+            "hub_cli-26",
+            "hub_cli-28",
+            "hub_cli-41",
+            "hub_cli-35",
+            "hub_cli-25"
+          ],
+          "abstained": false,
+          "overlap": 0.667,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q44",
+          "kind": "original",
+          "question": "What should I do if I lack permission to push to a repo?",
+          "answer": "Open a pull request (PR) and let the authors know about the changes you want to make [1].",
+          "chunk_ids": [
+            "hub_cli-52",
+            "hub_upload_models-19",
+            "hub_model_cards-15",
+            "hub_cli-116",
+            "hub_cli-51",
+            "hub_cli-53"
+          ],
+          "abstained": false,
+          "overlap": 0.875,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q45",
+          "kind": "paraphrase",
+          "question": "My GPU runs out of memory when I load a big model. What technique shrinks the weights?",
+          "answer": "Use gradient checkpointing to keep saved activations in pinned host memory and reduce GPU memory usage [4].",
+          "chunk_ids": [
+            "datasets_process-33",
+            "transformers_fine_tuning-5",
+            "transformers_pipeline_tutorial-10",
+            "transformers_quantization-2",
+            "transformers_fine_tuning-8",
+            "datasets_quickstart-23"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q46",
+          "kind": "paraphrase",
+          "question": "I have a general language model and a small set of my own examples. How do I adapt the model to them?",
+          "answer": "Use the Dataset API to preprocess your data, tokenize it, and prepare it for training [4].",
+          "chunk_ids": [
+            "datasets_quickstart-21",
+            "datasets_quickstart-17",
+            "hub_model_cards-4",
+            "hub_model_cards-18",
+            "datasets_quickstart-25",
+            "hub_model_cards-2"
+          ],
+          "abstained": false,
+          "overlap": 0.286,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q47",
+          "kind": "paraphrase",
+          "question": "I want to see the description page someone wrote for a model on the Hub, from code. What call fetches it?",
+          "answer": "The `ModelCard.load()` function fetches the description page for a model on the Hub [1].",
+          "chunk_ids": [
+            "hub_model_cards-0",
+            "hub_inference-5",
+            "hub_inference-14",
+            "hub_cli-114",
+            "hub_inference-11",
+            "transformers_fine_tuning-1"
+          ],
+          "abstained": false,
+          "overlap": 1.0,
+          "correct": true,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q48",
+          "kind": "paraphrase",
+          "question": "My classifier is slow when I feed texts one by one. Can I send many at a time?",
+          "answer": "Yes, you can pass batches of text to the model at once using batch inference [4].",
+          "chunk_ids": [
+            "datasets_process-52",
+            "hub_inference-53",
+            "datasets_process-10",
+            "transformers_pipeline_tutorial-13",
+            "datasets_process-53",
+            "datasets_process-34"
+          ],
+          "abstained": false,
+          "overlap": 0.2,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q49",
+          "kind": "paraphrase",
+          "question": "Which splitting method does DistilBERT's vocabulary rely on?",
+          "answer": "DistilBERT's vocabulary relies on byte pair encoding (BPE) [1].",
+          "chunk_ids": [
+            "transformers_tokenizers_summary-1",
+            "transformers_tokenizers_summary-11",
+            "transformers_tokenizers_summary-2",
+            "transformers_pipeline_tutorial-16",
+            "transformers_tokenizers_summary-4",
+            "transformers_tokenizers_summary-3"
+          ],
+          "abstained": false,
+          "overlap": 0.111,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q50",
+          "kind": "paraphrase",
+          "question": "When I apply a function to rows in groups, how many rows are in each group unless I change it?",
+          "answer": "The number of rows in each group depends on the grouping criteria applied when calling the function. If no specific criterion is given, all rows will be grouped together. To specify a particular row as the starting point, you can pass the index of the first row in the sequence.",
+          "chunk_ids": [
+            "datasets_process-24",
+            "datasets_process-4",
+            "datasets_process-7",
+            "datasets_process-40",
+            "datasets_process-2",
+            "datasets_process-10"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": false,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q51",
+          "kind": "paraphrase",
+          "question": "My data came as one big table with no held-out portion. How can I carve one out?",
+          "answer": "Use the --subset option to specify a subset of the data [5].",
+          "chunk_ids": [
+            "datasets_process-84",
+            "datasets_process-75",
+            "hub_cli-184",
+            "hub_cli-85",
+            "hub_cli-84",
+            "hub_cli-65"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q52",
+          "kind": "paraphrase",
+          "question": "Which function pushes a single local file into a model repo I already made?",
+          "answer": "The function used to push a single local file into a model repo I already made is hf upload [4].",
+          "chunk_ids": [
+            "hub_cli-45",
+            "hub_cli-46",
+            "hub_cli-51",
+            "hub_upload_models-7",
+            "hub_cli-32",
+            "hub_upload_models-15"
+          ],
+          "abstained": false,
+          "overlap": 0.5,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q53",
+          "kind": "paraphrase",
+          "question": "If I don't pick who runs my inference request, what does the client choose?",
+          "answer": "The client chooses based on the user's order in the specified URLs [1].",
+          "chunk_ids": [
+            "hub_inference-34",
+            "hub_inference-51",
+            "hub_inference-2",
+            "hub_inference-10",
+            "hub_inference-12",
+            "hub_inference-14"
+          ],
+          "abstained": false,
+          "overlap": 0.0,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": true
+        },
+        {
+          "id": "q54",
+          "kind": "paraphrase",
+          "question": "Will my request ever give up on its own if I leave the settings alone?",
+          "answer": "No, the request will never give up on its own without intervention.",
+          "chunk_ids": [
+            "hub_cli-93",
+            "hub_upload_models-10",
+            "hub_cli-16",
+            "hub_cli-116",
+            "hub_inference-51",
+            "hub_cli-221"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": false,
+          "citation_valid": false,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q55",
+          "kind": "paraphrase",
+          "question": "I don't want to install anything. How can I still try the command-line tool?",
+          "answer": "Use the `--quiet` option when downloading to suppress detailed output [2].",
+          "chunk_ids": [
+            "hub_cli-144",
+            "hub_cli-41",
+            "hub_inference-50",
+            "hub_cli-202",
+            "hub_cli-3",
+            "hub_cli-2"
+          ],
+          "abstained": false,
+          "overlap": 0.167,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": false,
+          "retrieval_hit": false
+        },
+        {
+          "id": "q56",
+          "kind": "paraphrase",
+          "question": "Is there a rehearsal mode that lists files without actually fetching them?",
+          "answer": "Yes, you can use the `--dry-run` parameter to preview what would be downloaded without actually doing so [4].",
+          "chunk_ids": [
+            "hub_cli-80",
+            "hub_cli-87",
+            "hub_cli-77",
+            "hub_cli-36",
+            "hub_cli-63",
+            "hub_cli-28"
+          ],
+          "abstained": false,
+          "overlap": 0.333,
+          "correct": false,
+          "number_ok": null,
+          "has_citation": true,
+          "citation_valid": true,
+          "cited_relevant": true,
+          "retrieval_hit": true
+        },
+        {
+          "id": "u01",
+          "kind": "unanswerable",
+          "question": "What is the monthly price of a Hugging Face Pro subscription?",
+          "answer": "Not specified in the given information [3].",
+          "chunk_ids": [
+            "hub_inference-18",
+            "hub_cli-164",
+            "hub_inference-51",
+            "hub_inference-17",
+            "hub_inference-5",
+            "hub_inference-31"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u02",
+          "kind": "unanswerable",
+          "question": "How do I train a model with reinforcement learning from human feedback using TRL?",
+          "answer": "I could not find this in the documents.",
+          "chunk_ids": [
+            "datasets_quickstart-21",
+            "datasets_quickstart-12",
+            "transformers_fine_tuning-11",
+            "datasets_quickstart-32",
+            "datasets_quickstart-31",
+            "datasets_quickstart-5"
+          ],
+          "abstained": true,
+          "hallucinated": false
+        },
+        {
+          "id": "u03",
+          "kind": "unanswerable",
+          "question": "Which GPU model is required to run Llama 3 70B in 4-bit?",
+          "answer": "None of the passages provide information about the GPU model required for running Llama 3 70B in 4-bit.",
+          "chunk_ids": [
+            "hub_cli-226",
+            "transformers_quantization-3",
+            "hub_cli-228",
+            "transformers_quantization-2",
+            "hub_cli-78",
+            "datasets_process-33"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u04",
+          "kind": "unanswerable",
+          "question": "How do I deploy a model on AWS SageMaker with the Hugging Face estimator?",
+          "answer": "The Hugging Face Estimator supports deploying models on AWS SageMaker. Use the `provider` parameter to specify the provider, such as 'aws', and configure other parameters accordingly. For detailed instructions, refer to the documentation.",
+          "chunk_ids": [
+            "hub_inference-14",
+            "hub_inference-18",
+            "hub_inference-1",
+            "hub_cli-164",
+            "hub_inference-5",
+            "hub_inference-31"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u05",
+          "kind": "unanswerable",
+          "question": "What is the maximum size of a single file on the Hub free plan?",
+          "answer": "The maximum size of a single file on the Hub free plan is not explicitly stated in the given passages.",
+          "chunk_ids": [
+            "hub_upload_models-51",
+            "hub_upload_models-59",
+            "hub_upload_models-60",
+            "hub_upload_models-32",
+            "hub_upload_models-48",
+            "hub_upload_models-22"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u06",
+          "kind": "unanswerable",
+          "question": "How do I fine-tune a model with LoRA using the PEFT library?",
+          "answer": "Fine-tuning uses the PEFT library to fine-tune a large pretrained model on a smaller dataset specific to a task or domain. This involves starting with random weights instead of random initialization.",
+          "chunk_ids": [
+            "datasets_quickstart-12",
+            "transformers_quantization-2",
+            "datasets_quickstart-19",
+            "hub_cli-76",
+            "transformers_fine_tuning-0",
+            "hub_cli-152"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u07",
+          "kind": "unanswerable",
+          "question": "How do I export a transformers model to ONNX format?",
+          "answer": "The `prepare_tf_dataset` method from \ud83e\udd17 Transformers can be used to prepare the dataset for compatibility with TensorFlow, which wraps a HuggingFace `~datasets.Dataset` into a `tf.data.Dataset`, making it ready for training or fine-tuning. This method also includes options for saving and exporting the dataset in various formats such as CSV, JSON, Parquet, SQL, and in-memory Python objects.",
+          "chunk_ids": [
+            "hub_cli-38",
+            "datasets_quickstart-19",
+            "datasets_process-84",
+            "datasets_quickstart-30",
+            "transformers_pipeline_tutorial-2",
+            "datasets_process-1"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u08",
+          "kind": "unanswerable",
+          "question": "Which language is the Rust tokenizers library written in and how do I build it?",
+          "answer": "The Rust tokenizers library is written in Rust. To build it, you would typically follow the instructions provided in the documentation or within the code itself.",
+          "chunk_ids": [
+            "hub_upload_models-24",
+            "hub_model_cards-4",
+            "hub_upload_models-22",
+            "transformers_tokenizers_summary-2",
+            "datasets_quickstart-23",
+            "hub_inference-36"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u09",
+          "kind": "unanswerable",
+          "question": "How do I evaluate a model with the lm-evaluation-harness?",
+          "answer": "Use the `EvalResult` class to include evaluation results in the metadata [2].",
+          "chunk_ids": [
+            "hub_model_cards-16",
+            "transformers_fine_tuning-9",
+            "hub_model_cards-18",
+            "datasets_process-33",
+            "hub_inference-31",
+            "datasets_process-57"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u10",
+          "kind": "unanswerable",
+          "question": "What is the context window of the Qwen2.5 models?",
+          "answer": "The Qwen2.5 models have a fixed context window of 72 billion parameters [1].",
+          "chunk_ids": [
+            "hub_inference-38",
+            "hub_inference-46",
+            "hub_model_cards-13",
+            "hub_inference-45",
+            "hub_inference-34",
+            "hub_inference-30"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u11",
+          "kind": "unanswerable",
+          "question": "How do I enable Flash Attention 2 when loading a model?",
+          "answer": "Set `dtype=\"auto\"` to load the weights in their saved dtype. Without it, PyTorch loads weights in `torch.float32`, which doubles memory usage if the weights are originally `torch.bfloat16`.",
+          "chunk_ids": [
+            "datasets_quickstart-23",
+            "datasets_quickstart-6",
+            "transformers_fine_tuning-5",
+            "transformers_pipeline_tutorial-32",
+            "transformers_pipeline_tutorial-33",
+            "hub_cli-220"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        },
+        {
+          "id": "u12",
+          "kind": "unanswerable",
+          "question": "How do I set up two-factor authentication on my Hugging Face account?",
+          "answer": "See the Authentication Guide for details on login [2].",
+          "chunk_ids": [
+            "hub_inference-18",
+            "hub_inference-17",
+            "transformers_fine_tuning-1",
+            "hub_cli-14",
+            "hub_upload_models-0",
+            "hub_inference-31"
+          ],
+          "abstained": false,
+          "hallucinated": true
+        }
+      ]
+    }
+  }
+}

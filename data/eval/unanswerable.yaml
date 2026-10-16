@@ -1,0 +1,120 @@
+# Unanswerable set. Reviewed 2026-10-14: u14, u15, u17, u18, u19, u23, u26, u30, u32 were removed
+# because the corpus (partly) answers them. Remaining flagged questions (u03, u06, u07, u08, u10,
+# u39, u40) are passing mentions only. Questions with no term hit are probably, not certainly, unanswerable.
+questions:
+  - id: u01
+    question: "What is the monthly price of a Hugging Face Pro subscription?"
+    check_terms: ["subscription price", "per month", "$9"]
+  - id: u02
+    question: "How do I train a model with reinforcement learning from human feedback using TRL?"
+    check_terms: ["RLHF", "TRL", "reward model"]
+  - id: u03
+    question: "Which GPU model is required to run Llama 3 70B in 4-bit?"
+    check_terms: ["Llama 3 70B", "A100", "H100"]
+  - id: u04
+    question: "How do I deploy a model on AWS SageMaker with the Hugging Face estimator?"
+    check_terms: ["SageMaker", "estimator"]
+  - id: u05
+    question: "What is the maximum size of a single file on the Hub free plan?"
+    check_terms: ["file size limit", "50 GB", "5 GB"]
+  - id: u06
+    question: "How do I fine-tune a model with LoRA using the PEFT library?"
+    check_terms: ["PEFT", "LoRA"]
+  - id: u07
+    question: "How do I export a transformers model to ONNX format?"
+    check_terms: ["ONNX", "optimum"]
+  - id: u08
+    question: "Which language is the Rust tokenizers library written in and how do I build it?"
+    check_terms: ["cargo", "Rust"]
+  - id: u09
+    question: "How do I evaluate a model with the lm-evaluation-harness?"
+    check_terms: ["lm-evaluation", "harness"]
+  - id: u10
+    question: "What is the context window of the Qwen2.5 models?"
+    check_terms: ["context window", "Qwen2.5"]
+  - id: u11
+    question: "How do I enable Flash Attention 2 when loading a model?"
+    check_terms: ["flash_attention_2", "Flash Attention"]
+  - id: u12
+    question: "How do I set up two-factor authentication on my Hugging Face account?"
+    check_terms: ["two-factor", "2FA"]
+  - id: u13
+    group: on_topic
+    question: "How many parameters does DistilBERT have?"
+    check_terms: ["66M", "66 million", "67M"]
+  - id: u16
+    group: on_topic
+    question: "How do I add new special tokens to a tokenizer?"
+    check_terms: ["add_special_tokens", "add_tokens"]
+  - id: u20
+    group: on_topic
+    question: "How do I upload a dataset that needs a custom loading script?"
+    check_terms: ["loading script", "trust_remote_code"]
+  - id: u21
+    group: on_topic
+    question: "How do I keep the datasets cache on a different drive?"
+    check_terms: ["HF_DATASETS_CACHE"]
+  - id: u22
+    group: on_topic
+    question: "How do I delete a repository I no longer need?"
+    check_terms: ["delete_repo", "hf repo delete"]
+  - id: u24
+    group: on_topic
+    question: "Which hardware options can I choose when creating a Space?"
+    check_terms: ["SpaceHardware", "space_sdk"]
+  - id: u25
+    group: on_topic
+    question: "Where can I see download statistics for my model?"
+    check_terms: ["download count", "download statistics"]
+  - id: u27
+    group: on_topic
+    question: "How do I translate English text into Tamil with a pipeline?"
+    check_terms: ["tamil", "translation_en_to"]
+  - id: u28
+    group: on_topic
+    question: "How do I fine-tune across several GPUs with DeepSpeed ZeRO-3?"
+    check_terms: ["DeepSpeed"]
+  - id: u29
+    group: on_topic
+    question: "How do I measure the perplexity of a language model?"
+    check_terms: ["perplexity"]
+  - id: u31
+    group: on_topic
+    question: "How do I merge LoRA adapter weights back into the base model?"
+    check_terms: ["merge_and_unload"]
+  - id: u33
+    group: control
+    question: "Who founded Hugging Face?"
+    check_terms: ["delangue", "founder"]
+  - id: u34
+    group: control
+    question: "What is the weather like in Chennai today?"
+    check_terms: ["chennai"]
+  - id: u35
+    group: adjacent
+    question: "How do I write a Dockerfile for a FastAPI service?"
+    check_terms: ["dockerfile", "fastapi"]
+  - id: u36
+    group: adjacent
+    question: "How do I train a model with PyTorch Lightning instead of the Trainer?"
+    check_terms: ["lightning"]
+  - id: u37
+    group: adjacent
+    question: "How much GPU memory does BERT-base need for training?"
+    check_terms: ["vram"]
+  - id: u38
+    group: adjacent
+    question: "What is the difference between an encoder model and an autoregressive decoder model?"
+    check_terms: ["autoregressive", "decoder-only"]
+  - id: u39
+    group: adjacent
+    question: "How do I convert a model to GGUF for llama.cpp?"
+    check_terms: ["gguf"]
+  - id: u40
+    group: adjacent
+    question: "How do I pick the language for a Whisper speech recognition pipeline?"
+    check_terms: ["whisper"]
+  - id: u41
+    group: adjacent
+    question: "How do I report abusive content on a Hub repository?"
+    check_terms: ["report abuse", "content policy"]

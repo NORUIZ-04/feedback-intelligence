@@ -183,6 +183,20 @@ Further tables (model comparison, retrieval metrics, RAG quality, API latency) w
 ## RAG corpus
 
 The retrieval experiments use ten pages from the Hugging Face transformers, datasets and huggingface_hub documentation (Apache-2.0, license files in `data/docs/licenses/`), with 56 labelled questions in `data/eval/questions.yaml`. The question set was written by one author; see the development log for its limits.
+## RAG answer generation
+
+Local generation with a retrieve, rerank, generate pipeline on a 6 GB laptop GPU, evaluated on 72 answerable and 32 unanswerable questions (one author, one run).
+
+| Metric | Qwen2.5-1.5B (fp16) | Phi-3.5-mini (4-bit) |
+|---|---|---|
+| Gold passage reaches the model | 58/72 | 58/72 |
+| Correct (conservative keyword check, a lower bound) | 24/72 | 36/72 |
+| Wrong refusals on answerable questions | 1 | 0 |
+| Unanswerable questions refused | 5/32 | 18/32 |
+| Seconds per answer | 0.928 | 3.86 |
+| Peak GPU memory | 4.22 GB | 4.01 GB |
+
+A 20-answer human check found the keyword scorer undercounts correct answers (it agreed with the human on 8 of 12 answerable and 7 of 8 unanswerable samples). A cross-encoder reranker raised gold-passage retrieval from 38 to 48 of 56 on the first question set. A reranker-score refusal gate was tested and rejected (threshold 5th to 95th percentile 0.029 to 0.991 across 200 splits). On-topic unanswerable questions are still mostly answered. Full numbers, limitations and failed experiments: [development log](docs/development-log/2026-10-16-rag-generation.md).
 ## Published model
 
 The best fine-tuned model is on the Hugging Face Hub: [BHARATHKUMAR0409/emotion-distilbert](https://huggingface.co/BHARATHKUMAR0409/emotion-distilbert) (test accuracy 0.9265, macro-F1 0.8873).
@@ -201,7 +215,7 @@ The code in this repository is MIT licensed. The trained model and the data have
 - [x] Chunking and retrieval experiments
 - [x] Embedding model comparison
 - [ ] FAISS index in the service
-- [ ] LLM answer generation with faithfulness evaluation
+- [x] LLM answer generation with faithfulness evaluation
 - [ ] FastAPI service
 - [ ] Gradio interface
 - [ ] Docker and Spaces deployment

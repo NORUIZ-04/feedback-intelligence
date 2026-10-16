@@ -31,3 +31,7 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - RAG corpus of ten Apache-2.0 documentation pages with license capture, cleaning and a 56-question labelled set (44 original, 12 paraphrase) with verified gold phrases.
 - Chunking experiments (200, 500, 1000 characters) with gold coverage, and retrieval evaluation (Recall@k, MRR, equal-context-budget recall) for TF-IDF, MiniLM, BGE-small and hybrid retrievers.
 - Tests for chunking, retrieval metrics, rank fusion and the question set.
+
+- Local RAG answer generation (Qwen2.5-1.5B fp16, Phi-3.5-mini 4-bit via bitsandbytes), cross-encoder reranking, automatic scoring with a tolerant refusal check, a 32-question unanswerable set, question set v2 and a 20-answer human check.
+- Reranker-score refusal gate evaluated and rejected (unstable across 200 splits).
+- Pinned bitsandbytes in requirements.

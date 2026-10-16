@@ -14,3 +14,7 @@ Engineering notes written as the project is built: what was done, why, the comma
 | 2026-10-13 | [Hub release](2026-10-13-hub-release.md) | Model published; Hub copy scores 0.927 vs 0.9265 local; license corrected after publishing |
 
 | 2026-10-13 | [RAG retrieval](2026-10-13-rag-retrieval.md) | 10-document corpus, 56 questions; best overall MRR: TF-IDF at 1000 characters (0.6787) |
+
+| 2026-10-14 | [RAG question set v2](2026-10-14-rag-question-set-v2.md) | 72 answerable (48 original, 24 paraphrase), 32 unanswerable; 9 drafted questions removed after review |
+
+| 2026-10-16 | [RAG answer generation](2026-10-16-rag-generation.md) | Phi-3.5-mini 4-bit 36/72 correct (lower bound), 18/32 refused; Qwen 1.5B 24/72, 5/32; reranker 38 to 48 of 56; score gate rejected |
