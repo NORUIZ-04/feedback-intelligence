@@ -14,3 +14,6 @@ requests
 sentence-transformers==6.1.0
 faiss-cpu==1.15.1
 bitsandbytes==0.50.2
+fastapi==0.143.2
+uvicorn==0.54.0
+httpx==0.28.1
