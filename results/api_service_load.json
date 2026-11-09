@@ -1,0 +1,57 @@
+{
+  "experiment": "api_service_load",
+  "timestamp_utc": "2026-10-16T10:08:55.819470+00:00",
+  "metrics": {
+    "load_report": {
+      "classifier": {
+        "seconds": 0.63,
+        "gpu_gb_added": 0.25
+      },
+      "retriever": {
+        "seconds": 5.49,
+        "gpu_gb_added": 0.12
+      },
+      "reranker": {
+        "seconds": 6.76,
+        "gpu_gb_added": 1.04
+      },
+      "generator": {
+        "seconds": 15.66,
+        "gpu_gb_added": 2.28
+      }
+    },
+    "gpu_after_load_gb": 3.69,
+    "peak_gb": 4.13,
+    "asks": [
+      {
+        "question": "What is the default batch size when using map with batched processing?",
+        "refused": false,
+        "cited": [
+          1
+        ],
+        "retrieve_ms": 118.4,
+        "rerank_ms": 269.4,
+        "generate_s": 1.38
+      },
+      {
+        "question": "How do I upload a whole local folder to a repo?",
+        "refused": false,
+        "cited": [
+          2,
+          4
+        ],
+        "retrieve_ms": 10.2,
+        "rerank_ms": 93.0,
+        "generate_s": 4.43
+      },
+      {
+        "question": "What is the monthly price of a Hugging Face Pro subscription?",
+        "refused": true,
+        "cited": [],
+        "retrieve_ms": 15.4,
+        "rerank_ms": 100.4,
+        "generate_s": 1.56
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "experiment": "rag_index_check",
+  "timestamp_utc": "2026-10-16T10:06:18.373373+00:00",
+  "metrics": {
+    "chunks": 567,
+    "index_mb": 1.84,
+    "build_and_save_seconds": 11.11,
+    "stored_load_seconds": 5.66,
+    "live_build_seconds": 7.34,
+    "queries": 104,
+    "same_top1": 104,
+    "same_top5": 104,
+    "search_ms_per_query": 10.92
+  }
+}
